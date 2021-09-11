@@ -4,13 +4,19 @@
 　→dockerのwordpressコンテナに入る<br>
 　→以下のコマンドを上から順に実行<br>
 \```
-　a2dismod php7.4
+　a2dismod php7
 \```
 
 <br>
 
 \```
-　service Apache2 restart
+　a2enmod php7
+\```
+
+<br>
+
+\```
+　service apache2 restart
 \```
 
 <br>
