@@ -1,0 +1,86 @@
+/* CSS Document */
+@charset "utf-8";
+
+#onecolumn{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+		margin-bottom: 15px;
+	}
+	.entry-title{
+		@include grid-media($tablet){
+			text-align: center;
+			font-size: 2.2rem!important;
+			line-height: 2.7rem;
+			padding-bottom: 13px;
+		}
+	}
+	.cps-post-box{
+		box-shadow: none;
+	}
+}
+#onecolumn960{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+		margin-bottom: 15px;
+	}
+	@include grid-media($tablet){
+		box-shadow: none;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	@include grid-media($pc){
+		width: 960px;
+	}
+}
+#onecolumn760{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+		margin-bottom: 15px;
+	}
+	@include grid-media($tablet){
+		box-shadow: none;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	@include grid-media($pc){
+		width: 760px;
+	}
+}
+#onecolumn960lp{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+		margin-bottom: 15px;
+	}
+	@include grid-media($tablet){
+		box-shadow: none;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	@include grid-media($pc){
+		width: 960px;
+	}
+	.entry-title{
+		@include grid-media($mobile){
+			text-align: center;
+			font-size: 1.8rem!important;
+			line-height: 2.2rem;
+			padding-bottom: 0px;
+			padding-top: 40px;
+		}
+		@include grid-media($tablet){
+			text-align: center;
+			font-size: 2.4rem!important;
+			line-height: 2.75rem;
+			padding-bottom: 10px;
+		}
+	}
+	.cps-post-box{
+		box-shadow: none;
+		@include grid-media($tablet){
+			background-color: transparent!important;
+		}
+	}
+}

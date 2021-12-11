@@ -1,0 +1,261 @@
+/* CSS Document */
+@charset "utf-8";
+
+//comment
+#comment-area,
+#respond{
+	width: 100%;
+	font-weight: 400;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+#comment-area{
+	@include grid-media($mobile){
+		padding: 0;
+	}
+	@include grid-media($tablet){
+		padding: 0px;
+	}
+}
+#respond{
+	@include grid-media($mobile){
+		padding: 15px 0;
+	}
+	@include grid-media($tablet){
+		padding: 0px;
+	}
+}
+.comment-list{
+	color: $text-color;
+	margin-bottom: 30px;
+	p{
+		font-size: 0.9em;
+	}
+}
+.commentmetadata,
+.comment-awaiting-moderation{
+	font-size: 0.7em;
+}
+.reply{
+	margin-top: 15px;
+	text-align: right;
+}
+.reply a{
+	padding: 5px 30px;
+	font-size: 0.8em;
+	color: #fff!important;
+	background: #ccc;
+	border-radius: 4px;
+	@include trans01;
+}
+.reply a:hover{
+	background: #aaa;
+}
+#comment-title{
+	@include grid-media($mobile){
+		margin-bottom: 20px;
+	}
+	@include grid-media($tablet){
+		margin-bottom: 20px;
+	}
+}
+#reply-title{
+	@include grid-media($mobile){
+		margin-bottom: 20px;
+	}
+	@include grid-media($tablet){
+		margin-bottom: 0px;
+	}
+}
+#reply-title,
+#comment-title{
+	span{
+		position: relative;
+		display: inline-block;
+		letter-spacing: 1px;
+		@include grid-media($mobile){
+			font-size: 1rem;
+			padding: 17px 13px;
+			padding-bottom: 0;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.15rem;
+			padding: 19px 14px;
+			font-weight: 400;
+		}
+	}
+	.jin-ifont-comment{
+		line-height: 0;
+		margin-right: 14px;
+		position: relative;
+		z-index: 1;
+		color: #fff;
+		@include grid-media($mobile){
+			margin-right: 12px;
+		}
+	}
+	.jin-ifont-comment:before{
+		font-size: 1.25rem;
+		line-height: 1.15rem;
+		padding-top: 1px;
+		@include grid-media($mobile){
+			padding-left: 2px;
+			padding-top: 3px;
+		}
+	}
+	span:before{
+		content: "";
+		position: absolute;
+		z-index: 0;
+		top: 10px;
+		left: 4px;
+		border: 1px solid #ccc;
+		width: 38px;
+		height: 38px;
+		border-radius: 25px;
+	}
+}
+.logged-in-as{
+	color: $text-color;
+}
+#cancel-comment-reply-link{
+	font-size: 0.7em;
+	text-decoration: underline;
+}
+.logged-in-as + .comment-flexbox{
+	.form-submit{
+		@include grid-media($tablet){
+			margin-top: 16px!important;
+			font-size: 0.85rem!important;
+		}
+		input{
+			@include grid-media($tablet){
+				font-size: 0.85rem!important;
+			}
+		}
+	}
+}
+.comment-flexbox{
+	@include grid-media($tablet){
+		display: flex;
+	}
+}
+.comment-form-comment textarea,
+.comment-form-author input,
+.comment-form-email #email{
+	width: 100%;
+	border-radius:4px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	font-size: 16px;
+	box-sizing: border-box;
+	margin-top: 0;
+	-webkit-appearance: none;
+	@include grid-media($mobile){
+		font-size: 0.95rem;
+	}
+	@include grid-media($tablet){
+		font-size: 0.95rem;
+	}
+}
+.comment-form-author input,
+.comment-form-email #email{
+	@include grid-media($mobile){
+		line-height: 1.2rem;
+	}
+}
+.comment-form-author{
+	@include grid-media($mobile){
+		margin-top: -10px;
+	}
+}
+.form-submit{
+	@include grid-media($tablet){
+		margin-top: -5px!important;
+	}
+}
+.form-submit,
+.comment-form-email{
+	@include grid-media($mobile){
+		margin-top: -5px;
+	}
+}
+.comment-child-flex{
+	@include grid-media($mobile){
+		width: 100%;
+	}
+	@include grid-media($tablet){
+		width: 35%;
+	}
+}
+.comment-form-comment{
+	@include grid-media($tablet){
+		width: 63%;
+		margin-right: 20px;
+	}
+}
+.reply a{
+	padding-left: 30px;
+	padding-right: 10px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.comment-reply-link{
+	position: relative;
+}
+.comment-reply-link:after{
+	position:absolute;
+	content: "\e927";
+	font-family: "jin-icons";
+	top: 5px;
+	left: 10px;
+	opacity: 1;
+	font-size: 1rem;
+	@include grid-media($mobile){
+		font-size: 1.2rem;
+		left: 8px;
+	}
+}
+
+.form-submit input{
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-top: 15px;
+	font-size: 1rem;
+	-webkit-appearance: none;
+	border: none;
+	border-radius: 4px;
+	@include trans01;
+	cursor: pointer;
+	color: #fff;
+	background: #ccc;
+	@include grid-media($tablet){
+		margin-top: 0px;
+	}
+}
+.form-submit input:hover{
+	background: #aaa;
+}
+.comment-form-author > input,
+.comment-form-email > input{
+	margin-bottom: 0px;
+	@include grid-media($tablet){
+		margin-bottom: 0px;
+	}
+}
+#comment-box label{
+	font-size: 0.95rem;
+}
+.comment-form-comment #comment{
+	@include grid-media($mobile){
+		height: 120px;
+	}
+	@include grid-media($tablet){
+		height: 97px;
+	}
+}
+.comment-notes{
+	display: none;
+}

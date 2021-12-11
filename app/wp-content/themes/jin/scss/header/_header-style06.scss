@@ -1,0 +1,12 @@
+/* CSS Document */
+@charset "utf-8";
+
+.header-style6-box #headmenu{
+	@include grid-media($tablet){
+		margin-top: 0px!important;
+		margin-left: 20px!important;
+	}
+	.search-text {
+		top: -7px!important;
+	}
+}

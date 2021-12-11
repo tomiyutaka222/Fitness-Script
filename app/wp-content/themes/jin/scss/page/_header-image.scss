@@ -1,0 +1,145 @@
+/* CSS Document */
+@charset "utf-8";
+
+#main-image{
+	position: relative;
+	@include grid-media($mobile){
+		overflow: hidden;
+		box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.15);
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		@include trans02;
+	}
+	a:hover img{
+		opacity: 0.8;
+	}
+	.top-image-meta{
+		position: absolute;
+		text-align: center;
+		@include grid-media($mobile){
+			top: 50%;
+			width: 90%;
+			left: 50%;
+			-webkit-transform: translateY(-50%) translateX(-50%);
+			transform: translateY(-50%) translateX(-50%);
+		}
+		@include grid-media($tablet){
+			left: 50%;
+			top: 50%;
+			width: 100%;
+			-webkit-transform: translateY(-50%) translateX(-50%);
+			transform: translateY(-50%) translateX(-50%);
+			
+		}
+	}
+	.main-image-text{
+		display: block;
+		text-align: center;
+		font-feature-settings : "palt";
+		@include grid-media($mobile){
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+			letter-spacing: 2px;
+		}
+		@include grid-media($tablet){
+			font-size: 1.65rem;
+			max-width: 85%;
+			line-height: 2.15rem;
+			letter-spacing: 3px;
+			margin: 0 auto;
+		}
+		@include grid-media($pc_view){
+			font-size: 2.4rem;
+			max-width: 1000px;
+			line-height: 3rem;
+			letter-spacing: 4px;
+		}
+	}
+	.main-image-text-sub{
+		display: block;
+		@include grid-media($mobile){
+			margin-top: 20px;
+			font-size: 0.75rem;
+		}
+		@include grid-media($tablet){
+			font-size: 0.85rem;
+			max-width: 85%;
+			margin: 0 auto;
+			margin-top: 15px;
+		}
+		@include grid-media($pc_view){
+			margin-top: 30px;
+			font-size: 1rem;
+			max-width: 700px;
+		}
+	}
+	.top-image-text-option-border{
+		text-shadow: white 2px 0px,  white -2px 0px,
+    white 0px -2px, white 0px 2px,
+    white 2px 2px , white -2px 2px,
+    white 2px -2px, white -2px -2px,
+    white 1px 2px,  white -1px 2px,
+    white 1px -2px, white -1px -2px,
+    white 2px 1px,  white -2px 1px,
+    white 2px -1px, white -2px -1px;
+	}
+	.top-image-text-option-shadow{
+		text-shadow: 0 3px 8px #aaa;
+	}
+	.top-image-subtext-option-border{
+		text-shadow: white 2px 0px,  white -2px 0px,
+    white 0px -2px, white 0px 2px,
+    white 2px 2px , white -2px 2px,
+    white 2px -2px, white -2px -2px,
+    white 1px 2px,  white -1px 2px,
+    white 1px -2px, white -1px -2px,
+    white 2px 1px,  white -2px 1px,
+    white 2px -1px, white -2px -1px;
+	}
+	.top-image-subtext-option-shadow{
+		text-shadow: 0 1px 3px #555;
+	}
+	.top-image-btn-color{
+		@include grid-media($mobile){
+			margin-top: 30px;
+		}
+		@include grid-media($tablet){
+			margin-top: 30px;
+		}
+		@include grid-media($pc_view){
+			margin-top: 50px;
+		}
+		a{
+			font-weight: 300;
+			letter-spacing: 1px;
+			@include grid-media($mobile){
+				font-size: 0.8rem;
+			}
+			@include grid-media($tablet){
+				padding: 10px 30px;
+			}
+			@include grid-media($pc_view){
+				padding: 15px 60px;
+			}
+		}
+	}
+}
+
+
+.main-image-wrapper{
+	position: relative;
+	z-index: 1;
+	.top-image-meta{
+		z-index: 2;
+	}
+}
+
+.header-style10-image{
+	@media (min-width: 768px) and (max-width: 1199px) {
+		margin-top: 30px;
+	}
+}

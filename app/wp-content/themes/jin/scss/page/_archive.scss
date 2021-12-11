@@ -1,0 +1,26 @@
+/* CSS Document */
+@charset "utf-8";
+
+.archive-box{
+	margin-top: 20px;
+}
+.archive-post-header{
+	position: relative;
+	text-align: center;
+	#breadcrumb{
+		text-align: left;
+		margin-top: -10px;
+	}
+}
+.archive-title-sub{
+	color: #ccc;
+	font-weight: 700;
+	letter-spacing: 5px;
+	font-size: 0.85rem;
+}
+.archive-title{
+	display: block;
+	font-size: 1.25rem;
+	font-weight: 400;
+	margin-top: 5px;
+}

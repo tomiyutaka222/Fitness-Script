@@ -1,0 +1,293 @@
+/* CSS Document */
+@charset "utf-8";
+
+.toppost-list-box{
+	overflow: hidden;
+	text-align: center;
+	@include grid-media($mobile){
+		margin-top: 10px;
+	}
+	.toppost-list-box-inner{
+		width: 400%;
+		transition: 0.6s;
+		text-align: left;
+		overflow: hidden;
+	}
+}
+input[name="switch"] {
+	display: none;
+}
+.tabBtn-mag{
+	display: inline-flex;
+	width: 100%;
+	padding: 0;
+	list-style-type: none;
+	@include grid-media($mobile){
+		flex-wrap: wrap;
+		margin-bottom: 10px;
+	}
+	@include grid-media($tablet){
+
+		margin-bottom: 30px;
+	}
+	li:not(:first-child){
+		@include grid-media($tablet){
+			margin-left: 4px;
+		}
+	}
+	li:nth-child(2n-1){
+		@include grid-media($mobile){
+			margin-right: 4px;
+		}
+	}
+	li{
+		position: relative;
+		will-change: transform;
+		@include trans02;
+		@include grid-media($mobile){
+			width: calc(50% - 2px);
+			margin-bottom: 4px;
+		}
+		@include grid-media($tablet){
+			width: 25%;
+		}
+	}
+	li:hover{
+		transform: scale(0.95);
+	}
+	label{
+		display: block;
+		padding: 10px 10px;
+		text-align: center;
+		background-color: rgba(189,189,189,0.17);
+		@include trans01;
+		@include grid-media($mobile){
+			font-size: 0.75rem;
+			font-weight: 700;
+			border-radius: 2px;
+			min-height: 18px;
+		}
+		@include grid-media($tablet){
+			font-size: 0.75rem;
+			font-weight: 500;
+			cursor: pointer;
+			min-height: 18px;
+		}
+		@include grid-media($pc){
+			font-size: 0.85rem;
+		}
+	}
+	label:after{
+		@include grid-media($tablet){
+			position: absolute;
+			content: "";
+			bottom: 5px;
+			margin-left: -8px;
+			width: 0;
+			height: 0;
+			opacity: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			@include trans01;
+		}
+	}
+}
+#tab-1:checked ~ .tabBtn-mag li [for="tab-1"],
+#tab-2:checked ~ .tabBtn-mag li [for="tab-2"],
+#tab-3:checked ~ .tabBtn-mag li [for="tab-3"],
+#tab-4:checked ~ .tabBtn-mag li [for="tab-4"]{
+	position: relative;
+	background-color: $base-color;
+	color: #fff;
+}
+.tabBtn-mag li:nth-child(5),
+.tabBtn-mag li:nth-child(6),
+.tabBtn-mag li:nth-child(7),
+.tabBtn-mag li:nth-child(8){
+	display: none;
+}
+#tab-1:checked ~ .tabBtn-mag li [for="tab-1"]:after,
+#tab-2:checked ~ .tabBtn-mag li [for="tab-2"]:after,
+#tab-3:checked ~ .tabBtn-mag li [for="tab-3"]:after,
+#tab-4:checked ~ .tabBtn-mag li [for="tab-4"]:after{
+	@include grid-media($tablet){
+		position: absolute;
+		content: "";
+		bottom: -8px;
+		left: 50%;
+		margin-left: -8px;
+		opacity: 1;
+		width: 0;
+		height: 0;
+		border-top: 8px solid $base-color;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+	}
+}
+#tab-1:checked ~ .toppost-list-box-inner .post-list-mag:nth-child(1),
+#tab-2:checked ~ .toppost-list-box-inner .post-list-mag:nth-child(2),
+#tab-3:checked ~ .toppost-list-box-inner .post-list-mag:nth-child(3),
+#tab-4:checked ~ .toppost-list-box-inner .post-list-mag:nth-child(4),
+#tab-1:checked ~ .toppost-list-box-inner .post-list-mag-sp1col:nth-child(1),
+#tab-2:checked ~ .toppost-list-box-inner .post-list-mag-sp1col:nth-child(2),
+#tab-3:checked ~ .toppost-list-box-inner .post-list-mag-sp1col:nth-child(3),
+#tab-4:checked ~ .toppost-list-box-inner .post-list-mag-sp1col:nth-child(4),
+#tab-1:checked ~ .toppost-list-box-inner .post-list:nth-child(1),
+#tab-2:checked ~ .toppost-list-box-inner .post-list:nth-child(2),
+#tab-3:checked ~ .toppost-list-box-inner .post-list:nth-child(3),
+#tab-4:checked ~ .toppost-list-box-inner .post-list:nth-child(4){
+	opacity: 1;
+}
+#tab-1:checked ~ .toppost-list-box-inner {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+#tab-2:checked ~ .toppost-list-box-inner {
+	-webkit-transform: translateX(-25%);
+	transform: translateX(-25%);
+}
+#tab-3:checked ~ .toppost-list-box-inner {
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+#tab-4:checked ~ .toppost-list-box-inner {
+	-webkit-transform: translateX(-75%);
+	transform: translateX(-75%);
+}
+
+.more-cat{
+	margin-left: auto!important;
+	margin-right: auto!important;
+	width: 100%;
+	text-align: center;
+	@include grid-media($mobile){
+		margin-top: 20px;
+		padding-bottom: 20px;
+	}
+	@include grid-media($tablet){
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.more-cat-button{
+		font-size: 1.1rem;
+		a{
+			position: relative;
+			@include grid-media($mobile){
+				color: #888!important;
+			}
+			@include grid-media($tablet){
+				color: #aaa!important;
+			}
+		}
+		a:hover span:after{
+			color: #fff;
+			transform: translateX(3px);
+		}
+		a:hover span:before{
+			transform: translateX(3px);
+		}
+		span:before{
+			content: "";
+			position: absolute;
+			border-radius: 20px;
+			background: #fff;
+			@include trans02;
+			@include grid-media($mobile){
+				left: 48px;
+				top: -5px;
+				width:34px;
+				height:34px;
+				box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+			}
+			@include grid-media($tablet){
+				left: 50px;
+				top: -7px;
+				width:38px;
+				height:38px;
+				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+			}
+		}
+		span:after{
+			content: "\e904";
+			position: absolute;
+			text-align: center;
+			line-height: 0;
+			font-family: "jin-icons";
+			@include trans02;
+			@include grid-media($mobile){
+				left: 58px;
+				top: 12px;
+				font-size: 0.85rem;
+			}
+			@include grid-media($tablet){
+				left: 61px;
+				top: 12px;
+				font-size: 1.1rem;
+			}
+		}
+	}
+}
+a.post-list-link{
+	@include trans02;
+	background-color: #fff;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	@include grid-media($mobile){
+		@include paper-sp;
+		padding:15px 10px;
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+	@include grid-media($tablet){
+		@include paper;
+		padding: 20px;
+		margin-bottom: 20px;
+	}
+}
+.post-list-publisher,
+.writer{
+	display: none;
+}
+.sp-post-list-meta{
+	text-align: right;
+}
+
+.toppost-list-box-simple{
+	.post-list-mag,
+	.post-list-mag-sp1col,
+	.post-list{
+		width: 100%!important;
+		float: none!important;
+		opacity: 1!important;
+		padding: 0!important;
+	}
+}
+.toppost-list-box-simple{
+	.post-list-mag,
+	.post-list-mag-sp1col{
+		justify-content: space-between;
+	}
+}
+.post-list,
+.post-list-mag,
+.post-list-mag-sp1col{
+	opacity: 0.2;
+	transition: opacity 1.2s;
+	width: 25%;
+	float: left;
+	@include grid-media($mobile){
+		padding: 2px 1px;
+	}
+	@include grid-media($tablet){
+		padding: 2px 24px;
+	}
+}
+.post-list,
+.post-list-mag,
+.post-list-mag3col,
+.post-list-mag-sp1col{
+	@include grid-media($tablet){
+		padding-top: 12px;
+	}
+}

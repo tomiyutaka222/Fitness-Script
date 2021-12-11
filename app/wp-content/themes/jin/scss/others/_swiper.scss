@@ -1,0 +1,63 @@
+/* CSS Document */
+@charset "utf-8";
+
+.swiper-button-next,
+.swiper-button-prev{
+	top:32%!important;
+	color: #ccc!important;
+	background-size: 13px 22px!important;
+	filter: grayscale(0);
+}
+
+.swiper-button-next{
+	right:5px!important;
+	background-image: none!important;
+}
+.swiper-button-prev{
+	left:5px!important;
+	background-image: none!important;
+}
+
+
+.swiper-button-next:after,
+.swiper-button-prev:after{
+	position: absolute;
+	font-family: "jin-icons";
+	font-size: 22px;
+	top: 0;
+	color: #fff;
+	text-shadow: 0 0 2px #aaa;
+	@include trans02;
+}
+.swiper-button-next:after{
+	content: "\e904";
+	right: 0;
+}
+.swiper-button-prev:after{
+	content: "\e933";
+	left: 0;
+}
+.swiper-button-prev:hover:after{
+	-webkit-transform: translateX(-3px);
+	transform: translateX(-3px);
+}
+.swiper-button-next:hover:after{
+	-webkit-transform: translateX(3px);
+	transform: translateX(3px);
+}
+.swiper-pagination-bullet{
+	@include grid-media($mobile){
+		width: 6px!important;
+		height: 6px!important;
+	}
+	@include grid-media($tablet){
+		width: 6px!important;
+		height: 6px!important;
+	}
+}
+.swiper-container-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-custom, .swiper-pagination-fraction{
+	@include grid-media($mobile){
+		bottom: 0px!important;
+	}
+}

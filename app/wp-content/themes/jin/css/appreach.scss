@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+@import "../lib/bourbon/bourbon";
+@import "../lib/neat/neat";
+
+
+$mobile: (
+	columns: 12,
+	gutter: 20px,
+	media: "(max-width: 767px)",
+);
+$tablet: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 768px)",
+);//タブレット以上の基本レイアウトに使用
+$tablet_pc: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 835px) and (max-width: 1199px)",
+);
+$pc: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 1200px)",
+);//PCとタブレットPCのレイアウト差別化のときに使用
+
+$pc_view: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 1024px)",
+);//タブレットPCとPCの見た目を共有するために使用
+
+$pc-width:1200px;
+$tablet-width:100%;
+
+$layout1: (
+	columns: 1,
+	gutter: 30px,
+);
+$layout1_0: (
+	columns: 1,
+	gutter: 0px,
+);
+$layout1_10: (
+	columns: 1,
+	gutter: 10px,
+);
+$layout1_15: (
+	columns: 1,
+	gutter: 15px,
+);
+$layout1_20: (
+	columns: 1,
+	gutter: 20px,
+);
+$layout12: (
+	columns: 12,
+	gutter: 30px,
+);
+$layout12_20: (
+	columns: 12,
+	gutter: 20px,
+);
+$layout12_15: (
+	columns: 12,
+	gutter: 15px,
+);
+$layout12_0: (
+	columns: 12,
+	gutter: 0px,
+);
+$layout12_10: (
+	columns: 12,
+	gutter: 10px,
+);
+
+$text-color:#524e4d;
+$link-color:#0094c8;
+
+$base-color:#2b2b2b;
+$sub-color2:#E3E5E5;
+$sub-color3:#FFFFFF;
+$accent-color:#f8b500;
+
+@mixin paper{
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+	@include grid-media($mobile){
+		border-radius: 0px;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+	}
+};
+@mixin paper-widget{
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+	@include grid-media($mobile){
+		border-radius: 0px;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+	}
+};
+@mixin paper-sp{
+	@include grid-media($mobile){
+		border-radius: 2px;
+		background: #fff;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
+		border-top: 1px solid #F3F3F3;
+	}
+};
+@mixin paper-hover{
+	transform: translateY(-3px);
+	box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.08);
+};
+@mixin paper2{
+	border-radius: 2px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+};
+
+@mixin trans00{
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+@mixin trans01{
+	-webkit-transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease, left 0.3s ease, bottom 0.3s ease, box-shadow 0.3s ease;
+	transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease, left 0.3s ease, bottom 0.3s ease, box-shadow 0.3s ease;
+}
+@mixin trans02{
+	-webkit-transition: color 0.4s ease, background 0.4s ease, transform 0.4s ease, opacity 0.4s ease, border 0.4s ease, padding 0.4s ease, left 0.4s ease, box-shadow 0.4s ease;
+	transition: color 0.4s ease, background 0.4s ease, transform 0.4s ease, opacity 0.4s ease, border 0.4s ease, padding 0.4s ease, left 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+
+
+/*appreach*/
+
+.appreach{ 
+    text-align: left; 
+    padding: 25px; 
+    margin:20px; 
+    border-radius:2px; 
+    overflow: hidden; 
+    box-shadow:0px 2px 5px 1px #e5e5e5; 
+} 
+.appreach:after {
+    content: ""; 
+    display: block; 
+    clear: both; 
+} 
+.appreach img, .appreach p { 
+    margin: 0; 
+    padding:0; 
+} 
+.appreach a:after { display: none; } 
+.appreach__icon { 
+    float: left; 
+    border-radius: 10%; 
+    overflow: hidden; 
+    margin: 0 3% 0 0 !important; 
+    width: 25% !important; 
+    height: auto !important; 
+    max-width: 120px !important; 
+} 
+.appreach__detail { 
+    display: inline-block; 
+    font-size: 20px; 
+    line-height: 1.5; 
+    width: 72%; 
+    max-width: 72%; 
+} 
+.appreach__detail:after { 
+    content: ""; 
+    display: block; 
+    clear: both; 
+} 
+p.appreach__name { 
+    font-size: 16px; 
+    color:#555; 
+    padding-bottom:10px; 
+    font-weight:bold; 
+    line-height: 1.5em !important; 
+    max-height: 3em; overflow: hidden; 
+} 
+.appreach__info { 
+    font-size: 12px !important; 
+    color:#888; 
+} 
+.appreach__info a{ color:#aaa; } 
+.appreach__developper, .appreach__price {margin-right: 0.5em; } 
+.appreach__posted a { margin-left: 0.5em; } 
+.appreach__links { 
+    float: left; 
+    height: 40px;
+    margin-top: 15px;
+    white-space: nowrap;
+} 
+.appreach__aslink img { 
+    margin-right: 10px;
+    height: 40px;
+    width: 135px;
+} 
+.appreach__gplink img {
+    height: 40px;
+    width: 134.5px;
+} 
+@include grid-media($mobile){
+    
+.appreach__links {display:flex;}    
+    
+.appreach{
+    margin:20px 0;
+    padding: 20px;
+} 
+.appreach__info { font-size: 11px !important;} 
+p.appreach__name { font-size: 15px;}
+}

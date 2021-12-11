@@ -1,0 +1,167 @@
+/* CSS Document */
+@charset "utf-8";
+
+$sp: (
+	columns: 12,
+	gutter: 20px,
+	media: "(max-width: 480px)",
+);
+$mobile: (
+	columns: 12,
+	gutter: 20px,
+	media: "(max-width: 767px)",
+);
+$tablet: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 768px)",
+);//タブレット以上の基本レイアウトに使用
+$tablet_pc: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 835px) and (max-width: 1199px)",
+);
+$pc: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 1200px)",
+);//PCとタブレットPCのレイアウト差別化のときに使用
+
+$pc_view: (
+	columns: 12,
+	gutter: 30px,
+	media: "(min-width: 1024px)",
+);//タブレットPCとPCの見た目を共有するために使用
+
+$pc-width:1200px;
+$tablet-width:100%;
+
+$layout1: (
+	columns: 1,
+	gutter: 30px,
+);
+$layout1_0: (
+	columns: 1,
+	gutter: 0px,
+);
+$layout1_10: (
+	columns: 1,
+	gutter: 10px,
+);
+$layout1_15: (
+	columns: 1,
+	gutter: 15px,
+);
+$layout1_20: (
+	columns: 1,
+	gutter: 20px,
+);
+$layout12: (
+	columns: 12,
+	gutter: 30px,
+);
+$layout12_20: (
+	columns: 12,
+	gutter: 20px,
+);
+$layout12_15: (
+	columns: 12,
+	gutter: 15px,
+);
+$layout12_0: (
+	columns: 12,
+	gutter: 0px,
+);
+$layout12_10: (
+	columns: 12,
+	gutter: 10px,
+);
+
+$text-color:#524e4d;
+$link-color:#0094c8;
+
+$base-color:#2b2b2b;
+$sub-color2:#E3E5E5;
+$sub-color3:#FFFFFF;
+$accent-color:#f8b500;
+
+@mixin paper{
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+	@include grid-media($mobile){
+		border-radius: 0px;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+	}
+};
+@mixin paper-widget{
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+	@include grid-media($mobile){
+		border-radius: 0px;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+	}
+};
+@mixin paper-sp{
+	@include grid-media($mobile){
+		border-radius: 2px;
+		background: #fff;
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.18);
+
+	}
+};
+@mixin paper-hover{
+	transform: translateY(-3px);
+	box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.08);
+};
+@mixin paper2{
+	border-radius: 2px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.1);
+};
+
+@mixin trans00{
+	-webkit-transition: all .2s;
+	transition: all .2s;
+}
+@mixin trans01{
+	-webkit-transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease, left 0.3s ease, bottom 0.3s ease, box-shadow 0.3s ease;
+	transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease, opacity 0.3s ease, border 0.3s ease, padding 0.3s ease, left 0.3s ease, bottom 0.3s ease, box-shadow 0.3s ease;
+}
+@mixin trans02{
+	-webkit-transition: color 0.4s ease, background 0.4s ease, transform 0.4s ease, opacity 0.4s ease, border 0.4s ease, padding 0.4s ease, left 0.4s ease, box-shadow 0.4s ease;
+	transition: color 0.4s ease, background 0.4s ease, transform 0.4s ease, opacity 0.4s ease, border 0.4s ease, padding 0.4s ease, left 0.4s ease, box-shadow 0.4s ease;
+}
+
+@mixin transform($value){
+  -webkit-transform: ($value);
+     -moz-transform: ($value);
+      -ms-transform: ($value);
+          transform: ($value);
+}
+@mixin transition($value){
+  -webkit-transition: ($value);
+     -moz-transition: ($value);
+      -ms-transition: ($value);
+          transition: ($value);
+}
+
+@mixin date{
+	font-size:0.8rem;
+	color: #bbb;
+	font-weight: 300;
+	letter-spacing: 1px;
+	@include grid-media($mobile){
+		font-weight: 400;
+	}
+}
+@mixin cat{
+	display: inline;
+	font-size: 0.8rem;
+	margin-right: 10px;
+	color: $accent-color;
+	font-weight: 400;
+	letter-spacing: 0;
+}

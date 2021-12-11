@@ -1,0 +1,65 @@
+/* CSS Document */
+@charset "utf-8";
+
+.error404{
+	.cps-post{
+		.search-box{
+			position: relative;
+			height: 70px;
+			margin-right: 50%;
+			input[type="search"] {
+				background-color: #fff;
+				border: 1px solid #ddd;
+				height: 34px;
+				width:100%;
+				margin:0;
+				padding:0 10px;
+				padding-right:40px;
+				border-radius: 17px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				@include trans01;
+				@include grid-media($mobile){
+					font-size: 16px;
+				}
+			}
+			input[type="submit"]{
+				font-family: "jin-icons";
+				position: absolute;
+				top: 0;
+				right: 0;
+				border:none;
+				height:34px;
+				width:34px;
+				color:$base-color;
+				background:none;
+				display: inline-block;
+				@include grid-media($mobile){
+					font-size: 16px;
+					right: 10px;
+				}
+			}
+			input[type="search"]:focus {
+				outline:none;
+				border:1px solid $link-color;
+			}
+			input[type="submit"]:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+.cat404{
+	list-style-type: disc;
+	padding-left: 25px;
+	margin-top: 10px;
+	li{
+		a{
+			color: $link-color;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+	}
+}

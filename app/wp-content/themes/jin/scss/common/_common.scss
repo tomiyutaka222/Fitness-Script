@@ -1,0 +1,272 @@
+/* CSS Document */
+@charset "utf-8";
+
+html,
+body,
+header,
+footer{
+	margin: 0;
+	padding: 0;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	letter-spacing: 1px;
+	
+}
+body{
+	@include grid-media($mobile){
+		font-weight: 400;
+	}
+	@include grid-media($tablet){
+		font-weight: 300;
+	}
+}
+
+
+.clearfix{
+	clear: both;
+}
+.text-off{
+	display: none;
+}
+
+.right{
+	text-align: right;
+}
+.logo-left{
+	text-align: left;
+}
+
+
+.tn_off,
+.tn_search_off,
+.tn_sns_off,
+.header_off{
+	display: none!important;
+}
+
+.sp-fix{
+	@include grid-media($mobile){
+		position: fixed!important;
+	}
+}
+
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+	background:$sub-color3;
+	overflow: hidden;
+	@include grid-media($mobile){
+		position: relative;
+	}
+}
+//タブレット表示でスマホコンテンツが表示されないように調整
+@include grid-media($tablet){
+	.cps-sp-menu-bar,
+	.sp-sidemenu-wrapper,
+	header #navtoggle,
+	.sp-menu-box,
+	.jin-sp-design{
+		display:none;
+	}
+}
+
+
+/* コンテンツエリア */
+#contents {
+	@include grid-container;
+	padding-top: 10px;
+	margin: 0 auto;
+	@include grid-media($mobile){
+		padding-top: 0;
+		margin-top: 0px;
+	}
+	@include grid-media($tablet){
+		width: $tablet-width;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	@include grid-media($tablet_pc){
+		width: $tablet-width;
+	}
+	@include grid-media($pc){
+		width: $pc-width;
+	}
+}
+#main-contents-one{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+	@include grid-media($tablet){
+		@include grid-column(12);
+	}
+}
+#main-contents{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+	@include grid-media($tablet){
+		@include grid-column(8,$layout12_10);
+	}
+	@include grid-media($pc_view){
+		@include grid-column(8.1,$layout12);
+		margin-bottom: 0;
+	}
+}
+
+/*サイドバーエリア*/
+#sidebar{
+	@include grid-media($mobile){
+		@include grid-column(12,$layout12_15);
+	}
+	@include grid-media($tablet){
+		@include grid-column(4,$layout12_20);
+		max-width: 350.25px!important;//追尾ウィジェットのために必要
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	@include grid-media($pc_view){
+		@include grid-column(3.9,$layout12);
+		max-width: 350.25px!important;//追尾ウィジェットのために必要
+	}
+}
+
+/* トップへ戻るボタン */
+.page-top-footer{
+	@include grid-media($mobile){
+		display: none;
+	}
+	@include grid-media($tablet){
+		position: absolute;
+		right: 15px;
+		top: 11px;
+		a.totop{
+			padding: 9px 30px 9px 30px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 1.5rem;
+			.jin-ifont-arrow-top:before{
+				@include trans02;
+			}
+		}
+		a:hover .jin-ifont-arrow-top:before{
+			-webkit-transform: translateY(-4px);
+			transform: translateY(-4px);
+		}
+	}
+	@include grid-media($pc_view){
+		right: -2px;
+	}
+}
+#page-top{
+    position:fixed;
+    display: none;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+	@include grid-media($mobile){
+		right:20px;
+    	bottom:123px;
+		z-index: 1!important;
+	}
+	@include grid-media($tablet){
+		right:22px;
+    	bottom:22px;
+		z-index: 9999;
+	}
+}
+
+#page-top a{
+    color:#fff;
+    text-decoration:none;
+    display:block;
+    cursor:pointer;
+    text-align:center;
+	border-radius: 30px;
+	@include grid-media($mobile){
+		width: 42px;
+		height: 42px;
+    	padding:5px;
+		font-size: 1.15rem;
+	}
+	@include grid-media($tablet){
+		width: 45px;
+		height: 45px;
+    	padding:8px;
+		font-size: 1.2rem;
+	}
+	.jin-ifont-arrowtop:before{
+		@include trans02;
+		@include grid-media($mobile){
+			padding-right: 0;
+		}
+	}
+}
+
+#page-top a:hover .jin-ifont-arrow-top:before{
+    -webkit-transform: translateY(-3px);
+			transform: translateY(-3px);
+}
+
+
+/* スマホのエリア境界に使用する装飾 */
+.area-border{
+	position: relative;
+	height: 2px;
+	border-radius: 1px;
+	background: $base-color;
+	margin: 0 auto;
+	opacity: 0.3;
+	@include grid-media($mobile){
+		margin-top: 40px;
+		width: 80px;
+	}
+}
+.area-border:before,
+.area-border:after,
+.area-border2:before,
+.area-border2:after{
+	content: "・・・";
+	position: absolute;
+	top: 2px;
+	font-size: 21px;
+	color: $base-color;
+	line-height: 0;
+	letter-spacing: -6px;
+	@include grid-media($mobile){
+		top: 1px;
+	}
+	@include grid-media($tablet){
+		display: none!important;
+	}
+}
+.area-border:before,
+.area-border2:before{
+	left: -55px;
+}
+.area-border:after,
+.area-border2:after{
+	right: -50px;
+}
+.area-border2{
+	@include grid-media($mobile){
+		position: relative;
+		width: 80px;
+		height: 2px;
+		border-radius: 1px;
+		background: $base-color;
+		opacity: 0.3;
+		margin: 0 auto;
+		margin-top: 30px;
+		margin-bottom: 40px;
+	}
+}

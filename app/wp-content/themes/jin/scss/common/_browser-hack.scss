@@ -1,0 +1,176 @@
+/* CSS Document */
+@charset "utf-8";
+
+//IE11、EDGEのみのハック
+_:-ms-lang(x), .concept-box1:after,
+_:-ms-lang(x), .concept-box2:after,
+_:-ms-lang(x), .concept-box3:after,
+_:-ms-lang(x), .concept-box4:after,
+_:-ms-lang(x), .concept-box5:after,
+_:-ms-lang(x), .concept-box6:after{
+	@include grid-media($tablet){
+		border: none!important;
+		top: -25px!important;
+		left: 31px!important;
+		padding: 12px;
+	}
+}
+_:-ms-lang(x), .sidebar_style1,
+_:-ms-lang(x), .sidebar_style6{
+	padding-top: 0!important;
+}
+
+//IE11のみのハック
+@media all and (-ms-high-contrast:none){
+	.my-profile .profile-sns-menu ul .pro-line a{
+		padding-top: 3px!important;
+	}
+	.profile-follow .line-sns a{
+		padding-top: 6px!important;
+	}
+}
+
+
+//Androidのみのハック
+@include grid-media($mobile){
+	.android .pro-contact a,
+	.android .pro-insta a{
+		padding-left: 5px!important;
+	}
+	.android .contact-sns a{
+		padding-left: 5px!important;
+		padding-right: 5px!important;
+		padding-top: 7px!important;
+		padding-bottom: 2px!important;
+	}
+	.android .head-sp-menu-bar ul li a{
+		font-weight: 500!important;
+	}
+	.android input.search-text::-webkit-input-placeholder{
+		padding-top: 3px;
+	}
+	.android input.search-text{
+		margin-top: 2px;
+	}
+	.android .sp-menu-box ul li a:before{
+		top: 9px!important;
+		line-height: 20px;
+		overflow: visible;
+	}
+	.android .sp-menu-box ul li ul li a:before{
+		top: 4px!important;
+	}
+	.android .pickup-title{
+		font-size: 10px!important;
+		letter-spacing: 0!important;
+	}
+	.android .widget_categories ul > li > a:before,
+	.android .widget_nav_menu ul > li > a:before{
+		top: 21px;
+	}
+	.android .widget_categories ul > li > ul > li > a:before,
+	.android .widget_nav_menu ul > li > ul > li > a:before{
+		top: 12px;
+	}
+	.android .widget_categories ul .count{
+		top: 11px;
+	}
+	.android .widget_archive ul .count{
+		top: 10px;
+	}
+	.android .widget_categories ul ul .count{
+		top: 0px;
+	}
+	.android .cps-post-main ul:not([class]) li:before,
+	.android .cps-post-main table ul:not([class]) li:before{
+		top: 0.5em;
+	}
+	.android .cps-post-main ol > li:after,
+	.android .cps-post-main table ol:not([class]) li:after{
+		width: 20px;
+		height: 20px;
+		left: 0px;
+		top: 11px;
+	}
+	.android .cps-post-main ol > li:before,
+	.android .cps-post-main table ol:not([class]) li:before{
+		left: 0px;
+		height: 20px;
+		width: 20px;
+		top: 0px;
+	}
+	.android .cps-post-main table{
+		border-collapse: separate!important;
+		border-spacing: 0;
+	}
+	.android .cps-post-main table th,
+	.android .cps-post-main table td{
+		border-top: none;
+		border-left: none;
+	}
+	.android .cps-post-main table td:last-child{
+		border-right: none;
+	}
+	.android .cps-post-main table tr:last-child th,
+	.android .cps-post-main table tr:last-child td{
+		border-bottom: none;
+	}
+	.android #prev-next .prev .metabox img,
+	.android #prev-next .next .metabox img{
+		width: 150px!important;
+		max-height: 112px;
+	}
+}
+
+
+//safariのみのハック
+_::-webkit-full-page-media, _:future, :root .headsns .line a{
+	margin:0px 1px!important;
+}
+_::-webkit-full-page-media, _:future, :root .profile-title{
+	letter-spacing: 0;
+}
+@include grid-media($tablet){
+	_::-webkit-full-page-media, _:future, :root .pro-insta a{
+		padding-top:8px!important;
+	}
+	_::-webkit-full-page-media, _:future, :root .pro-youtube a{
+		padding-top:7px!important;
+	}
+	_::-webkit-full-page-media, _:future, :root  body#nts-style .blog-card-hl-box{
+		padding-top: 5px;
+	}
+	_::-webkit-full-page-media, _:future, :root .blog-card-hl-box{
+		padding-top: 6px;
+	}
+	_::-webkit-full-page-media, _:future, :root .blog-card .blog-card-hl::after{
+		top: 7px;
+	}
+}
+
+@include grid-media($pc_view){
+	_::-webkit-full-page-media, _:future, :root .post-list-mag,
+	_::-webkit-full-page-media, _:future, :root .post-list,
+	_::-webkit-full-page-media, _:future, :root .related-entry-section,
+	_::-webkit-full-page-media, _:future, :root #prev-next,
+	_::-webkit-full-page-media, _:future, :root .widget_nav_menu ul > li > a,
+	_::-webkit-full-page-media, _:future, :root .widget_categories ul > li > a,
+	_::-webkit-full-page-media, _:future, :root .myintro,
+	_::-webkit-full-page-media, _:future, :root .myname,
+	_::-webkit-full-page-media, _:future, :root .widget a,
+	_::-webkit-full-page-media, _:future, :root .widget div,
+	_::-webkit-full-page-media, _:future, :root .myjob{
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	_::-webkit-full-page-media, _:future, :root .post-list-mag .post-list-title,
+	_::-webkit-full-page-media, _:future, :root .post-list .post-list-title,
+	_::-webkit-full-page-media, _:future, :root .related-entry-section .post-list-title,
+	_::-webkit-full-page-media, _:future, :root #prev-next p,
+	_::-webkit-full-page-media, _:future, :root .pickup-title{
+		font-weight: 700!important;
+	}
+	_::-webkit-full-page-media, _:future, :root .cps-post-main ol > li:after{
+		top:13px;
+	}
+}

@@ -1,0 +1,9 @@
+/* CSS Document */
+@charset "utf-8";
+
+.amazonjs_item ul:not([class]) li:before{
+    display:none;
+}
+.amazonjs_item h4:before{
+	background-color:white !important;
+}

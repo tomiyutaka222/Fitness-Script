@@ -1,0 +1,281 @@
+/* CSS Document */
+@charset "utf-8";
+
+//アニメーションキーフレーム
+@keyframes down-fade-animation { 
+	0% {
+		transform: translateY(-60px);
+		filter: opacity(0);
+	}
+	100% {
+		transform: translateY(0px);
+		filter: opacity(1);
+	} 
+}
+@keyframes up-fade-animation { 
+		0% {
+			transform: translateY(10px);
+			filter: opacity(0);
+		} 
+		100% {
+			transform: translateY(0px);
+			filter: opacity(1);
+		} 
+	}
+@keyframes fade-animation { 
+		0% {
+			filter: opacity(0);
+		} 
+		100% {
+			filter: opacity(1);
+		} 
+	}
+@keyframes pickup-animate { 
+		0% {
+			opacity: 0;
+		} 
+		100% {
+			opacity: 1;
+		} 
+	}
+@keyframes pickup-menu-animate { 
+		0% {
+			transform: translateY(30px);
+			filter: opacity(0);
+		} 
+		100% {
+			transform: translateY(0px);
+			filter: opacity(1);
+		} 
+	}
+@keyframes cps-info-animate { 
+		0% {
+			transform: translateX(-10px);
+			filter: opacity(0);
+		} 
+		100% {
+			transform: translateX(0px);
+			filter: opacity(1);
+		} 
+	}
+@keyframes cps-info-icon-animate { 
+		0% {
+			transform: translateX(0px);
+			filter: opacity(1);
+		} 
+		100% {
+			transform: translateX(10px);
+			filter: opacity(0);
+		} 
+	}
+@keyframes sp-sidemenu-animate { 
+		0% {
+			transform: translateY(10px);
+			animation-timing-function: ease-out;
+			filter: opacity(0);
+		}
+		45% {
+			transform: translateY(-7px);
+			animation-timing-function: ease-out;
+			filter: opacity(1);
+		} 
+		100% {
+			transform: translateY(0px);
+			filter: opacity(1);
+			animation-timing-function: ease-out;
+		} 
+	}
+@keyframes sp-sidemenu-btn-animate { 
+		0% {
+			transform: scale(1);
+		}
+		25% {
+			transform: scale(0.85);
+		}
+		60% {
+			transform: scale(1.05);
+		} 
+		100% {
+			transform: scale(1);
+		} 
+	}
+@keyframes sp-sidemenu-search-animate { 
+		0% {
+			transform: translateX(0px);
+			filter: opacity(0);
+		}
+		80% {
+			transform: translateX(-325px);
+			filter: opacity(1);
+		} 
+		100% {
+			transform: translateX(-320px);
+			filter: opacity(1);
+		} 
+	}
+
+
+@include grid-media($mobile){
+	.header-box.animate{
+		animation-name: down-fade-animation;
+		animation-duration: 0.6s;
+	}
+	.cps-info-bar.animate{
+		animation-name:cps-info-animate;
+		animation-duration: 0.6s;
+		animation-delay:0.7s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.cps-info-bar.animate:after{
+		animation-name:cps-info-icon-animate;
+		animation-duration: 1.5s;
+		animation-delay:0.8s;
+		animation-timing-function: ease;
+		animation-iteration-count: infinite;
+		filter: opacity(1);
+		z-index: 4;
+	}
+	.cps-icon-bar.animate,
+	.headsearch.animate .search-box:before{
+		animation-name: fade-animation;
+		animation-duration: 0.6s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.cps-sp-menu-bar.animate{
+		animation-name: up-fade-animation;
+		animation-duration: 0.5s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.main-contents.animate,
+	.pickup-contents-box.animate,
+	.pickup-contents-box-post-type.animate,
+	.main-image.animate{
+		animation-name: pickup-animate;
+		animation-duration: 0.6s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		opacity: 0;
+		z-index: 4;
+	}
+	
+}
+
+@include grid-media($tablet){
+	.header-box.animate{
+		animation-name: down-fade-animation;
+		animation-duration: 0.6s;
+	}
+	.header.animate{
+		animation-name: up-fade-animation;
+		animation-duration: 0.6s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.header-style3-animate.animate,
+	.header-style4-animate.animate,
+	.header-style5-animate.animate,
+	.header-style7-animate.animate{
+		animation-name: fade-animation;
+		animation-duration: 0.6s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.header-style6-animate.animate,
+	.header-style8-animate.animate{
+		animation-name: up-fade-animation;
+		animation-duration: 0.6s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.header-style9-animate.animate{
+		animation-name: pickup-animate;
+		animation-duration: 0.6s;
+		animation-delay:0.8s;
+		animation-fill-mode:forwards;
+		opacity:0;// なぜかfilterでやるとチラつくのでopacityを使用
+		position: relative;
+		z-index: 4;
+	}
+	.cps-info-bar.animate{
+		animation-name:cps-info-animate;
+		animation-duration: 0.8s;
+		animation-delay:0.8s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 4;
+	}
+	.pickup-contents-box-post-type.animate{
+		animation-name: up-fade-animation;
+		animation-duration: 0.8s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 2; 
+	}
+	.main-contents.animate,
+	.sideber.animate{
+		animation-name:up-fade-animation;
+		animation-duration: 0.8s;
+		animation-delay:0.8s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+	}
+	.pickup-contents-box.animate{
+		position: relative;
+		z-index: 3;
+		
+		$pages: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+		@each $page in $pages {
+			$i: index($pages, $page);
+			li:nth-child(#{$i}) {
+				animation-name: pickup-menu-animate;
+				animation-duration: 0.8s;
+				animation-delay:0.19s * $i;
+				animation-fill-mode:forwards;
+				filter: opacity(0);
+			}
+		}
+	}
+	.cps-info-bar.animate a span:after {
+		animation-name:cps-info-icon-animate;
+		animation-duration: 1.7s;
+		animation-delay:1.4s;
+		animation-fill-mode:forwards;
+		animation-timing-function: ease;
+		animation-iteration-count: infinite;
+		filter: opacity(1);
+		z-index: 4;
+	}
+	.main-image.animate{
+		animation-name: fade-animation;
+		animation-duration: 0.8s;
+		animation-delay:0.6s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+		position: relative;
+		z-index: 3;
+	}
+	
+}

@@ -1,0 +1,103 @@
+/* CSS Document */
+@charset "utf-8";
+
+
+.sns-design-type02{
+	.sns li a:hover,
+	.sns-top li a:hover{
+		opacity: 1!important;
+		-webkit-transform: translateY(3px);
+		transform: translateY(3px);
+	}
+	.sns-top li a,
+	.sns li a{
+		border-radius:2px;
+		background: rgba(255,255,255,0);
+		font-size:0.7rem;
+		position:relative;
+		display:block;
+		text-align:center;
+		text-decoration: none;
+		letter-spacing: 0;
+		padding:3px 6px;
+		height: 25px;
+		@include trans01;
+		@include grid-media($tablet){
+			padding:3px 6px;
+			font-size: 0.8rem;
+		}
+		@include grid-media($mobile){
+			padding:2px 6px;
+			font-size: 0.75rem;
+		}
+	}
+	
+
+	/* hatebu */
+	.sns-top .hatebu a,
+	.sns .hatebu a{
+		line-height: 1;
+		padding-top: 4px;
+	}
+
+	/* pocket */
+	.sns-top .pocket a,
+	.sns .pocket a{
+		@include grid-media($tablet){
+			font-size: 0.75rem;
+			padding-top: 3px;
+		}
+		@include grid-media($mobile){
+			font-size: 0.7rem;
+			padding-top: 3px;
+		}
+	}
+	.sns-top .twitter a,
+	.sns-top .facebook a,
+	.sns-top .hatebu a,
+	.sns-top .pocket a,
+	.sns-top .line a,
+	.sns .twitter a,
+	.sns .facebook a,
+	.sns .hatebu a,
+	.sns .pocket a,
+	.sns .line a{
+		border: 1px solid;
+	}
+	/* twitter */
+	.sns .twitter a,
+	.sns-top .twitter a{
+		border-color:#00acee;
+		color:#00acee;
+	}
+	/* Facebook */
+	.sns .facebook a,
+	.sns-top .facebook a{
+		border-color:#3b5998;
+		color:#3b5998;
+	}
+	/* hatebu */
+	.sns .hatebu a,
+	.sns-top .hatebu a{
+		border-color:#5d8ac1;
+		color:#5d8ac1;
+	}
+	/* Pocket */
+	.sns .pocket a,
+	.sns-top .pocket a{
+		border-color:#f03e51;
+		color:#f03e51;
+	}
+	/* line */
+	.sns .line a,
+	.sns-top .line a{
+		display: block;
+		border-color:#6cc655;
+		color:#6cc655;
+		text-align: center;
+		svg{
+			width: 24px!important;
+			fill:#6cc655!important;
+		}
+	}
+}

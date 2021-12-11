@@ -1,0 +1,146 @@
+/* CSS Document */
+@charset "utf-8";
+
+body#nts-style{
+	font-family: 'Noto Sans Japanese', sans-serif;
+	input[type="text"],
+	input[type="search"]{
+		font-family: 'Noto Sans Japanese', sans-serif;
+	}
+	@include grid-media($mobile){
+		font-weight: 300;
+	}
+	@include grid-media($tablet){
+		font-weight: 200;
+	}
+	p{
+		@include grid-media($mobile){
+			font-weight: 300;
+		}
+		@include grid-media($tablet){
+			font-weight: 200;
+		}
+	}
+	strong{
+		@include grid-media($mobile){
+			font-weight: 700!important;
+		}
+		@include grid-media($tablet){
+			font-weight: 500!important;
+		}
+	}
+	.sp-menu-box ul li a{
+		@include grid-media($mobile){
+			font-weight: 500!important;
+		}
+	}
+	.sp-menu-box ul li ul li a{
+		@include grid-media($mobile){
+			font-weight: 300!important;
+		}
+	}
+	.sp-menu-box ul.menu-box li a:before{
+		@include grid-media($mobile){
+			left: 3px;
+			top:21px;
+		}
+	}
+	.cps-post-title,
+	.new-entry-item-title,
+	.info-title,
+	#prev-next p,
+	.myname,
+	.widgettitle,
+	.toppost-list-box label,
+	.pickup-title,
+	.profile-name{
+		@include grid-media($mobile){
+			font-weight: 400!important;
+		}
+		@include grid-media($tablet){
+			font-weight: 300!important;
+		}
+	}
+	.kaisetsu-box1-title,
+	.kaisetsu-box2-title,
+	.kaisetsu-box3-title,
+	.kaisetsu-box4-title,
+	.kaisetsu-box5-title,
+	.cps-post-main-box h2,
+	.cps-post-main-box h3,
+	.cps-post-main-box h4,
+	.cps-post-main-box h5,
+	.ranking-title01,
+	.ranking-title02,
+	.ranking-title03,
+	.cps-post-main table.cps-table03 th,
+	.related-entry-headline-text span{
+		@include grid-media($mobile){
+			font-weight: 500!important;
+		}
+		@include grid-media($tablet){
+			font-weight: 400!important;
+		}
+	}
+	.top-image-meta,
+	.fixed-content a,
+	.cps-post-date,
+	.myintro,
+	.myjob,
+	.textwidget,
+	.tagcloud a,
+	.profile-desc,
+	.new-entry-item-title,
+	.widget ul li a,
+	.widget_categories ul li a,
+	.widget_recent_comments .recentcomments{
+		@include grid-media($mobile){
+			font-weight: 300;
+		}
+		@include grid-media($tablet){
+			font-weight: 200;
+		}
+	}
+	.post-list-link .entry-title{
+		@include grid-media($mobile){
+			font-weight: 500;
+		}
+		@include grid-media($tablet){
+			font-weight: 400!important;
+		}
+	}
+	.post-list-mag-sp1col .post-list-title{
+		@include grid-media($mobile){
+			font-weight: 500!important;
+		}
+	}
+	.kaisetsu-box1:after,
+	.kaisetsu-box2:after,
+	.kaisetsu-box4:after,
+	.kaisetsu-box5:after,
+	.innerlink-box1:after{
+		font-family: "jin-icons",'Noto Sans Japanese', sans-serif;
+	}
+	.ef,
+	#prev-next a.prev:after,
+	#prev-next a.next:after{
+		font-family: 'Quicksand','Noto Sans Japanese', sans-serif;
+	}
+	.widget_archive > ul > li > a:before,
+	.widget_categories > ul > li > a:before{
+		line-height: 0.2rem;
+	}
+	@include grid-media($tablet){
+		#breadcrumb .bcHome{
+			span:before{
+				top: -6px;
+			}
+		}
+	}
+	.blog-card .blog-card-hl:after{
+		top: 8px;
+	}
+	.widget_recent_comments ul li > a:before{
+		top: 1px;
+	}
+}

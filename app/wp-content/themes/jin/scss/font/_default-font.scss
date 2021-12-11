@@ -1,0 +1,24 @@
+/* CSS Document */
+@charset "utf-8";
+
+body#nofont-style{
+	font-family: 'ヒラギノ角ゴ ProN W3', Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+	.kaisetsu-box1:after,
+	.kaisetsu-box2:after,
+	.kaisetsu-box4:after,
+	.kaisetsu-box5:after,
+	.innerlink-box1:after{
+		font-family: "jin-icons",'ヒラギノ角ゴ ProN W3', Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+	}
+	.ef,
+	#prev-next a.prev:after,
+	#prev-next a.next:after{
+		font-family: 'Quicksand', 'ヒラギノ角ゴ ProN W3', Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+		letter-spacing: 2px;
+		font-feature-settings : "palt";
+	}
+	input[type="text"],
+	input[type="search"]{
+		font-family: 'Quicksand', 'ヒラギノ角ゴ ProN W3', Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+	}
+}

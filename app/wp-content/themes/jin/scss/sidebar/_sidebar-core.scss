@@ -1,0 +1,8 @@
+/* CSS Document */
+@charset "utf-8";
+
+#widget-tracking{
+	@include grid-media($mobile){
+		display: none;
+	}
+}

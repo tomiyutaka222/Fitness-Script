@@ -1,0 +1,177 @@
+/* CSS Document */
+@charset "utf-8";
+
+.blog-card-hl-box{
+	position: absolute;
+	border-radius: 2px;
+	background: #ccc;
+	@include grid-media($tablet){
+		font-size: 12px;
+		font-weight: 500;
+		padding: 5px 10px;
+		top: -14px;
+		left: 20px;
+		width: 130px;
+	}
+	@include grid-media($mobile){
+		font-weight: bold;
+		font-size: 11px;
+		padding: 4px 8px;
+		top: -12px;
+		left: 12px;
+		width: 120px;
+	}
+}
+.blog-card{
+	display: block;
+	position: relative;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	margin-top: 20px!important;
+	margin-bottom: 30px!important;
+	background: rgba(255,255,255,0.00);
+	word-wrap:break-word;
+	box-sizing: border-box;
+	text-decoration: none!important;
+	@include trans02;
+	@include grid-media($mobile){
+		width:100%;
+		padding:12px;
+		margin:10px 0px;
+		padding-top: 22px!important;
+	}
+	@include grid-media($tablet){
+		width:90%;
+		margin:10px auto;
+		padding:20px;
+		padding-top: 30px!important;
+	}
+	.blog-card-hl{
+		position: relative;
+		color: #fff;
+		letter-spacing: 0;
+		line-height: 0;
+	}
+	.blog-card-hl:after{
+		position: absolute;
+		content: "あわせて読みたい";
+		color: #fff;
+		width: 100px;
+		top: 5px;
+		left: 1px;
+		letter-spacing: 0;
+		@include grid-media($mobile){
+			left: -2px;
+			top: 6px;
+		}
+	}
+	.jin-ifont-post{
+		color: #fff;
+		font-size: 0.7rem;
+	}
+}
+.external-blog-card{
+	.blog-card-hl-box{
+		@include grid-media($tablet){
+			width: 109px;
+		}
+		@include grid-media($mobile){
+			width: 97px;
+		}
+	}
+	.blog-card-hl:after{
+		content: "外部サイトへ";
+		color: #fff;
+		width: 100px;
+	}
+}
+.blog-card:hover{
+	opacity: 0.8!important;
+}
+.blog-card:hover .blog-card-thumbnail img{
+	transform: scale(1.1);
+}
+.blog-card-box{
+	display: flex;
+}
+.blog-card-content{
+	flex: 2.5;
+	max-width: calc(100% - 182px);
+	@include grid-media($mobile){
+		max-width: calc(100% - 120px);
+	}
+}
+.blog-card-thumbnail{
+	display: block;
+	overflow: hidden;
+	@include grid-media($mobile){
+		margin-right: 10px;
+		flex: 1.82;
+	}
+	@include grid-media($tablet){
+		margin-right: 20px;
+		flex: 1;
+	}
+	img{
+		filter:opacity(1);
+		display: block;
+		padding: 0!important;
+		margin: 0!important;
+		vertical-align: baseline;
+		width: 100%;
+		height: auto;
+		background: #fff;
+		@include trans02;
+	}
+}
+.blog-card-title{
+	display: block;
+	letter-spacing: 1px;
+	color: $text-color;
+	@include trans01;
+	@include grid-media($mobile){
+		font-size: 0.85rem;
+		line-height: 1.2rem;
+		font-weight: 700;
+	}
+	@include grid-media($tablet){
+		margin-bottom:15px;
+		font-size: 1.1rem;
+		line-height: 1.5rem;
+		font-weight: 500;
+	}
+}
+.blog-card-excerpt{
+	color:$text-color;
+	display: none;
+	@include grid-media($tablet){
+		margin-top: 15px;
+		font-size: 0.75rem;
+		display: block;
+	}
+}
+.blog-card-footer{
+	display: flex;
+	justify-content: flex-end;
+	font-size:70%;
+	color:#777;
+	margin-bottom: 0;
+	text-align: right;
+	@include grid-media($mobile){
+		margin-top:10px;
+	}
+	@include grid-media($tablet){
+		margin-top:15px;
+	}
+	.blog-card-logo{
+		margin-right: 5px;
+		img{
+			padding: 0!important;
+			margin: 0!important;
+		}
+	}
+	.blog-card-sitetitle{
+		display: block;
+		margin-top: 1px;
+	}
+}

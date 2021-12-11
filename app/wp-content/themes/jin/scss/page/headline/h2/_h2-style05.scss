@@ -1,0 +1,37 @@
+/* CSS Document */
+@charset "utf-8";
+
+.h2-style05{
+	h2{
+		position: relative;
+    	background-color: $base-color;
+		color: #fff;
+		border-bottom: none;
+		border-radius:6px;
+		margin-bottom: 30px;
+		@include grid-media($mobile){
+			font-size: 1.3rem;
+			line-height: 1.7rem;
+			padding: 10px 14px;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.65rem;
+			line-height: 2rem;
+			padding: 12px 14px;
+		}
+	}
+	h2:before{
+		position: absolute;
+		bottom: -12px;
+		left: 45px;
+		z-index: 90;
+		margin-left: -15px;
+		border-top: 12px solid;
+		border-left: 12px solid transparent;
+		border-right: 12px solid transparent;
+		border-bottom: 0;
+		border-top-color: $base-color;
+		content: "";
+	}
+}

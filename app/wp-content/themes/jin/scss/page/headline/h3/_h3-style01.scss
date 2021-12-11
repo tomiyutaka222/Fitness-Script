@@ -1,0 +1,25 @@
+/* CSS Document */
+@charset "utf-8";
+
+.h3-style01{
+	h3{
+		border-bottom: 3px solid $base-color;
+		@include grid-media($mobile){
+			font-size: 1.2rem;
+			line-height: 1.7rem;
+			padding: 5px 8px;
+			padding-top: 0;
+			margin-top: 1.4rem;
+			margin-bottom: 1rem;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.5rem;
+			line-height: 2rem;
+			padding: 4px 8px;
+			padding-top: 0;
+			margin-top: 2.3rem;
+			margin-bottom: 1.6rem;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+/* CSS Document */
+@charset "utf-8";
+
+.sidebar_style1{
+	.widget{
+		@include paper-widget;
+		padding-bottom: 25px;
+		padding-top: 25px;
+		margin-bottom: 20px;
+		font-weight: 400;
+		font-size: 0.95rem;
+		@include grid-media($mobile){
+			padding: 15px!important;
+			margin-bottom: 30px;
+			border-radius: 2px;
+			@include paper-sp;
+		}
+		@include grid-media($tablet){
+			padding: 15px;
+		}
+		@include grid-media($pc_view){
+			padding: 30px;
+		}
+	}
+	.widget.widget-profile{
+		@include grid-media($mobile){
+			padding: 0px!important;
+		}
+	}
+	.widgettitle{
+		border-bottom: 2px solid $base-color;
+		margin-bottom: 15px;
+		padding-bottom: 2px;
+		font-weight: 500;
+		@include grid-media($mobile){
+			font-size: 1.1rem;
+		}
+		@include grid-media($tablet){
+			font-size: 1rem;
+		}
+		@include grid-media($pc_view){
+			font-size: 1.1rem;
+		}
+	}
+}

@@ -1,0 +1,152 @@
+/* CSS Document */
+@charset "utf-8";
+
+.post-list .post-list-inner-infeed{
+	overflow: hidden;
+	@include trans01;
+	@include grid-media($mobile){
+		@include paper-sp;
+		padding:0px;
+		margin-bottom: 10px;
+		height: auto;
+	}
+	@include grid-media($tablet){
+		@include paper;
+		padding:0px;
+		margin-bottom: 20px;
+	}
+}
+.post-list .post-list-inner-infeed:hover{
+	@include paper-hover;
+}
+.post-list.basicstyle{
+	a.post-list-link{
+		padding: 0;
+		@include trans01;
+	}
+	a.post-list-link:hover{
+		@include paper-hover;
+	}
+	.post-list-item{
+		padding: 0;
+		background: transparent;
+		border-radius: 4px;
+		.post-list-inner{
+			display: flex;
+			.post-list-thumb{
+				height: auto;
+				position: relative;
+				@include grid-media($mobile){
+					width: 150px;
+				}
+				@include grid-media($tablet){
+					width: 170px;
+				}
+				@include grid-media($pc_view){
+					width: 314px;
+				}
+				img{
+					display: block;
+					width: 100%;
+					height: auto;
+				}
+			}
+			.post-list-meta{
+				@include grid-media($mobile){
+					width: calc(100% - 150px);
+					padding: 8px 10px;
+				}
+				@include grid-media($tablet){
+					width: calc(100% - 170px);
+					padding: 15px 18px;
+					padding-bottom: 20px;
+				}
+				@include grid-media($pc_view){
+					width: calc(100% - 314px);
+					padding: 15px 18px;
+					padding-bottom: 20px;
+				}
+				.post-list-title{
+					@include grid-media($mobile){
+						font-size:11px;
+						line-height: 1rem;
+						letter-spacing: 0px;
+						font-weight: 700;
+					}
+					@include grid-media($tablet){
+						font-size:15px;
+						margin-bottom: 11px;
+						line-height: 1.4rem;
+						font-weight: 500;
+					}
+					@include grid-media($pc_view){
+						font-size:18px;
+						margin-bottom: 11px;
+						line-height: 1.6rem;
+						font-weight: 500;
+					}
+				}
+
+				.post-list-date{
+					position: absolute;
+					bottom: 3px;
+					right: 12px;
+					color: #aaa;
+					letter-spacing: 1px;
+					font-weight: 500;
+					@include grid-media($mobile){
+						bottom: 3px;
+						right: 12px;
+						font-size: 0.55rem;
+						font-weight: 700;
+						letter-spacing: 1px!important;
+					}
+					@include grid-media($tablet){
+						bottom: 8px;
+						right: 18px;
+						font-size: 0.8rem;
+					}
+				}
+			}
+			.post-list-cat{
+				@include cat;
+				position: absolute;
+				color: #fff!important;
+				background:$accent-color;
+				border-radius: 15px;
+				@include grid-media($mobile){
+					top: 4px;
+					left: 4px;
+					font-size: 0.5rem;
+					font-weight: 700;
+					padding:1px 7px;
+					padding-top: 0;
+				}
+				@include grid-media($tablet){
+					top: 8px;
+					left: 8px;
+					font-size: 0.55rem;
+					font-weight: 400;
+					padding: 2px 8px;
+				}
+				@include grid-media($pc_view){
+					font-size: 0.65rem;
+				}
+			}
+			.post-list-desc{
+				font-size: 0.7rem;
+				margin-top: 5px;
+				color: #888!important;
+				@include grid-media($mobile){
+					display: none;
+				}
+				@include grid-media($tablet){
+					display: none;
+				}
+				@include grid-media($pc_view){
+					display: block;
+				}
+			}
+		}
+	}
+}

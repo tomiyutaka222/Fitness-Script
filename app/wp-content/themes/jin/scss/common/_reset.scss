@@ -1,0 +1,95 @@
+/* CSS Document */
+@charset "utf-8";
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ol,
+dl,
+dt,
+dd,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td,
+article,
+figure{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align:baseline;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+i{
+	font-style: normal!important;
+}
+ol,
+ul {
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+article,
+header,
+footer,
+aside,
+figure,
+figcaption,
+nav,
+section {
+	display:block;
+}
+h1,
+h2,
+h3,
+h4,
+h5{
+	font-weight: 500;
+}
+a,
+a:link,
+a:visited{
+	text-decoration: none;
+	color: $text-color;
+}
+a{
+	@include trans02;
+}
+a:hover{
+	color: $link-color;
+}
+input[type="text"],
+input[type="search"],
+input[type="search"]:hover,
+input[type="button"],
+input[type="submit"],
+textarea,
+text{
+	-webkit-appearance: none;
+}
+input::-webkit-input-placeholder {
+	color: #ccc;
+}
+input:focus{
+	outline: 0;
+}
+strong{
+	@include grid-media($mobile){
+		font-weight: 700;
+	}
+	@include grid-media($tablet){
+		font-weight: 600;
+	}
+}

@@ -1,0 +1,119 @@
+/* CSS Document */
+@charset "utf-8";
+
+.pager-top{
+	display: block;
+	width: 100%;
+}
+
+.pagination{
+	padding-left: 0;
+	@include grid-media($mobile){
+		margin: 20px;
+	}
+	@include grid-media($tablet){
+		margin: 30px 0;
+	}
+}
+
+.pagination,
+.pagination li a {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.pagination li{
+	position: relative;
+	margin:0 4px;
+}
+.pagination a {
+	text-decoration:none;
+	background:#fff;
+	font-weight: 400;
+	font-size: 0.85rem;
+	padding: 5px 3px;
+	padding-bottom: 4px;
+	padding-left: 5px;
+	border-radius: 20px;
+	line-height: 0;
+	@include grid-media($mobile){
+		min-width:34px;
+		min-height:34px;
+		color: #888!important;
+		padding-top: 4px;
+		box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+	}
+	@include grid-media($tablet){
+		min-width:38px;
+		min-height:37px;
+		color: #aaa!important;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+	}
+}
+.pagination li.spancount span{
+	display: block;
+	padding-bottom: 10px;
+	color: #aaa;
+}
+.pagination li:not([class*="current"]) a:hover {
+	color: #fff!important;
+	transform: translateY(-3px);
+}
+.pagination li.current a {
+	background-color:#cdcdcd;
+	border: 1px solid #cdcdcd;
+	cursor: default;
+	color: #fff!important;
+	pointer-events: none;
+}
+
+
+/* nextpage */
+
+.nextpage{
+	padding-left: 0;
+	margin: 30px 0;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.nextpage span {
+	position: relative;
+	display: block;
+	font-weight: 400;
+	font-size: 0.85rem;
+	line-height: 24px;
+	text-align: center;
+	padding: 6px 6px;
+	border-radius: 1px;
+	margin:0 3px;
+	min-width:37px;
+	min-height:36px;
+	background-color:#cdcdcd!important;
+	border: 1px solid #cdcdcd;
+	cursor: default;
+	color: #fff!important;
+	pointer-events: none;
+}
+.nextpage a{
+	display: block;
+	text-decoration:none!important;
+	opacity: 1!important;
+}
+.nextpage a span {
+	background:#fff!important;
+	border: 1px solid #aaa;
+	color: #aaa!important;
+	@include trans01;
+}
+
+@include grid-media($mobile){
+	.nextpage a{
+		min-width:43px;
+		min-height:42px;
+		padding: 5px 4px;
+	}
+}

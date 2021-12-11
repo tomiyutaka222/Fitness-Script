@@ -1,0 +1,851 @@
+/* CSS Document */
+@charset "utf-8";
+
+.article_style1{
+	.cps-post-box{
+		@include grid-media($mobile){
+			padding: 15px 0;
+		}
+		@include grid-media($tablet){
+			@include paper-widget;
+			padding: 20px;
+		}
+		@include grid-media($pc_view){
+			padding: 30px;
+		}
+	}
+}
+.article_style2{
+	.cps-post-box{
+		padding: 20px;
+		padding-left: 0;
+		padding-right: 10px;
+		@include grid-media($mobile){
+			padding: 15px 0;
+		}
+	}
+}
+.cps-post{
+	.cps-post-thumb{
+		margin-bottom: 5px;
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+		&:not(.jin-thumb-original){
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.cps-post-header{
+		margin-bottom: 0px;
+		.cps-post-cat{
+			@include cat;
+			margin-right: 5px;
+			margin-bottom: 15px;
+			display: block;
+			a{
+				color: #fff!important;
+				border-radius: 15px;
+				line-height: 0;
+				@include grid-media($mobile){
+					padding: 3px 10px;
+					font-size: 0.65rem;
+					font-weight: 400;
+				}
+				@include grid-media($tablet){
+					padding: 5px 10px;
+					font-size: 0.7rem;
+					font-weight: 300;
+				}
+			}
+		}
+		.cps-post-title{
+			font-weight: 300;
+			@include grid-media($mobile){
+				font-size: 1.45rem;
+				line-height: 1.9rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.5rem;
+				line-height: 2rem;
+			}
+			@include grid-media($pc_view){
+				font-size: 1.8rem;
+				line-height: 2.3rem;
+			}
+		}
+		.cps-post-meta{
+			display: block;
+			margin-top: 15px;
+			@include grid-media($mobile){
+				margin-top: 5px;
+			}
+			.cps-post-date-box{
+				display: block;
+				text-align: right;
+				@include grid-media($mobile){
+					margin-bottom: 2px;
+				}
+				@include grid-media($tablet){
+					margin-bottom: 4px;
+				}
+				.cps-post-date{
+					@include date;
+					.jin-ifont-watch:before,
+					.jin-ifont-reload:before{
+						font-size: 0.8rem;
+						padding-bottom: 4px;
+						margin-right: -4px;
+						vertical-align: bottom;
+					}
+				}
+			}
+		}
+	}
+}
+.cps-post-meta{
+	.writer{
+		display: none;
+	}
+}
+.timeslash{
+	color: #bbb;
+	font-size: 0.8rem;
+}
+
+
+.cps-post{
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+}
+.cps-post-main{
+	position: relative;
+	z-index: 0;
+	a{
+		text-decoration: underline;
+		@include trans01;
+	}
+	// ソーシャルリンクのcurrentColorに対応
+	.wp-block-social-link a {
+		color: currentColor;
+	}
+	a:hover{
+		opacity:0.6;
+	}
+	padding-top: 20px;
+
+	img{
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+	}
+	iframe{
+		max-width: 100%;
+	}
+	table{
+		margin-bottom: 20px;
+		width: 100%;
+		border: 1px solid #ccc;
+		border-collapse: collapse;
+		max-width: 100%!important;
+		word-break: break-all;
+	}	
+	table tr td,
+	table tr th,{
+		padding: 8px;
+		border: 1px solid #ccc;
+		vertical-align: middle;
+	}
+	table tr th{
+		font-size: 0.9rem;
+		font-weight: bold;
+	}
+	table img.star{
+		display: block;
+		width: 130px;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	// 記事内にコメントウィジェットを入れた時の修正
+	footer{
+		background-color: transparent;
+		padding: 0;
+	}
+	/*動画の大きさを調整*/
+	.video {
+		max-width:100%;
+		text-align: center;
+		overflow: hidden;
+	}
+
+	/*Instagramの大きさを調整*/
+	.instagram {
+	  position: relative;
+	  padding-bottom: 120%;
+	  padding-top: 30px;
+	  height: 0;
+	  overflow: hidden;
+	}
+
+	/*動画を囲んでいるdiv目一杯に広げる*/
+	.video iframe,
+	.instagram iframe {
+		@include grid-media($mobile){
+			width: 100%;
+			max-height: 200px;
+		}
+	}
+	p{
+		padding-bottom: 2rem;
+		padding-top: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		letter-spacing: 0.05em;
+		line-height: 1.8em;
+		font-size: 1em;
+		@include grid-media($mobile){
+			font-size: 1em;
+			font-weight: 400;
+		}
+	}
+	h2,
+	h3,
+	h4,
+	h5{
+		font-weight: 400;
+		letter-spacing: 0;
+		@include grid-media($mobile){
+			font-weight: 500;
+		}
+	}
+	h5{
+		@include grid-media($mobile){
+			font-size: 1rem;
+			line-height: 1.5rem;
+			padding: 4px 0px;
+			margin-top: 0rem;
+			margin-bottom: 0.8rem;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.1rem;
+			line-height: 1.6rem;
+			padding: 4px 0px;
+			margin-top: 0rem;
+			margin-bottom: 0.8rem;
+			font-weight: 700;
+		}
+	}
+	blockquote {
+		position: relative;
+		margin: 0;
+		margin-bottom: 1.4em;
+		margin-top: 0em;
+		padding: 2.4em 2.6em 0em 3em;
+		font-size: .9em;
+		background: #efefef;
+		border-radius:4px;
+	}
+	blockquote:after{
+		position: absolute;
+		bottom: 8px;
+		right: 15px;
+		content: 'a';
+		opacity: 0.08;
+		content: '\e924';
+		font-family: "jin-icons";
+		font-size: 2.4rem;
+		-webkit-transform:			scale( -1, -1);
+		transform:			scale( -1, -1);
+		-ms-filter:			fliph();
+		filter:				fliph();
+	}
+	blockquote:before{
+		position: absolute;
+		top: 8px;
+		left: 15px;
+		content: '\e924';
+		font-family: "jin-icons";
+		font-size: 2.4rem;
+		opacity: 0.08;
+	}
+	ul:not([class]),
+	ul.wp-block-latest-posts__list,
+	ul.jinlist {
+		padding-left: 20px;
+		padding-top: 0;
+		margin-top: 0em;
+		margin-bottom: 1.5em;
+		ul{
+			margin-top: .5em;
+			margin-left: 0;
+			margin-bottom: 1.5em !important;
+			padding-left: 4px;
+		}
+		ol{
+			margin-left: 0;
+			margin-top: .75em;
+			margin-bottom: 1.5em !important;
+			padding-left: .65em;
+			li::before{
+				position: absolute;
+				content: "";
+				top: 2px;
+				left: 0px;
+				height: 20px;
+				width: 20px;
+				border-radius: 10px;
+				background-color: #000;
+			}
+		}
+	}
+	ul li{
+		position: relative;
+		display: block;
+		margin-bottom: 0.35em;
+		padding:0em 0px 0em 25px;
+	}
+	ul:not([class]) li:before,
+	ul.jinlist li:before,
+	ul.wp-block-latest-posts__list li:before,
+	table ul li:before{
+		display: block;
+		content: '';
+		position: absolute;
+		top: 0.6em;
+		left: 10px;
+		width: 6px;
+		height: 6px;
+		background-color: $base-color;
+		border-radius: 100%;
+	}
+	ul.blocks-gallery-grid{
+		display: flex;
+		margin-top: 1.5em;
+		li{
+			padding: 0;
+		}
+	}
+	ul.wp-block-social-links{
+		li{
+			padding: 0;
+		}
+	}
+	ol{
+		counter-reset:li;
+		padding-left: 20px;
+		margin-top: 0em;
+		margin-bottom: 1.5em;
+		ol{
+			counter-reset:li2;
+			margin-left: 0;
+			margin-top: .75em;
+			margin-bottom: 1.5em !important;
+			padding-left: .65em;
+			li::before{
+				position: absolute;
+				content: "";
+				top: 2px;
+				left: 0px;
+				height: 20px;
+				width: 20px;
+				border-radius: 10px;
+				background-color: #000;
+			}
+		}
+		ul{
+			margin-top: .5em;
+			margin-left: 0;
+			padding-left: 4px;
+		}
+	}
+	ol > li,
+	table ol li{
+		position:relative;
+		display: block;
+		padding:0em 0px 0em 25px;
+		margin-bottom: 0.5em;
+
+	}
+	ol > li:after,
+	table ol li:after{
+		counter-increment: li;
+		content: counter(li);
+		position: absolute;	
+		width: 20px;
+		height: 20px;
+		left: 0px;
+		padding:0;
+		line-height: 0;
+		color: #fff;
+		text-align: center;
+		font-size: 0.65em;
+		letter-spacing: 0;
+		@include grid-media($tablet){
+			top: 12px;
+		}
+		@include grid-media($mobile){
+			font-weight: 400;
+			top: 13px;
+		}
+	}
+	ol > li > ol >li:after{
+		counter-increment: li2;
+		content: counter(li2);
+	}
+	ol > li:before,
+	table ol li:before{
+		position: absolute;	
+		content: "";
+		left: 0px;
+		height: 20px;
+		width: 20px;
+		border-radius:10px;
+		background: #000;
+		@include grid-media($tablet){
+			top: 2px;
+		}
+		@include grid-media($mobile){
+			top: 3px;
+		}
+	}
+	div ul:not([class]),
+	div ol{
+		margin-bottom: 0;
+	}
+	//吹き出しの中で使用時
+	div.balloon-box ul:not([class]),
+	div.balloon-box ol{
+		margin-top: 0.5em;
+		margin-bottom: 0;
+	}
+	div ol li:last-of-type,
+	div ul li:last-of-type{
+		margin-bottom: 0;
+	}
+	.wp-caption{
+		max-width: 100%;
+		@include grid-media($mobile){
+			margin-bottom: 30px;
+		}
+		@include grid-media($tablet){
+			margin-bottom: 35px;
+		}
+	}
+	.wp-caption-text{
+		display: block;
+		font-size: 0.75rem;
+		color: #888;
+		margin-top: -18px;
+		line-height: 1.2rem;
+		text-align: center;
+		padding-bottom: 0!important;
+		a{
+			color: #888!important;
+			text-decoration: none!important;
+		}
+	}
+	table.cps-table03{
+		width: 100%;
+		margin-bottom: 30px;
+		th,
+		td{
+			vertical-align: middle;
+			font-size: 0.9rem;
+			letter-spacing: 0;
+			line-height: 1.2rem;
+
+		}
+		th{
+			background:#FFFAF0;
+			@include grid-media($mobile){
+				font-weight: 700;
+			}
+			@include grid-media($tablet){
+				font-weight: 500;
+			}
+		}
+		th.ranking-title{
+			padding: 12px;
+			font-size: 1.1em;
+			text-align: left;
+		}
+		td{
+			@include grid-media($mobile){
+				padding: 10px 7px;
+			}
+			@include grid-media($tablet){
+				padding: 14px;
+			}
+		}
+		td.rankinginfo{
+			vertical-align: top;
+			text-align: left;
+		}
+		td img{
+			display: block;
+			margin: 0 auto;
+			margin-top: 0px;
+			margin-bottom: 0!important;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		img.star{
+			display: block;
+			width: 130px;
+			height: auto;
+		}
+	}
+	table.cps-table03{
+		td.rankinginfo{
+			width: 70%!important;
+		}
+	}
+	.ranking01,
+	.ranking02,
+	.ranking03{
+		margin-top: 40px;
+		display: block;
+		.ranking-title01,
+		.ranking-title02,
+		.ranking-title03,
+		.ranking-title04{
+			border-bottom: 1px solid;
+			letter-spacing: 0;
+			position: relative;
+			margin-bottom: 20px;
+			@include grid-media($mobile){
+				font-size: 21px;
+				font-weight: 700;
+				padding-left: 60px;
+			}
+			@include grid-media($tablet){
+				font-size: 26px;
+				font-weight: 400;
+				padding-left: 75px;
+			}
+			img{
+				position: absolute;
+				height: auto;
+			}
+			img.ranking-number{
+				@include grid-media($mobile){
+					width: 55px;
+					bottom: -18px;
+					left: 2px;
+				}
+				@include grid-media($tablet){
+					width: 65px;
+					bottom: -15px;
+					left: 5px;
+				}
+			}
+			img.ranking-number-girly{
+				@include grid-media($mobile){
+					width: 55px;
+					bottom: -18px;
+					left: 2px;
+				}
+				@include grid-media($tablet){
+					width: 65px;
+					bottom: -17px;
+					left: 5px;
+				}
+			}
+			img.ranking-number-rich{
+				@include grid-media($mobile){
+					width: 44px;
+					bottom: -36px;
+					left: 8px;
+				}
+				@include grid-media($tablet){
+					width: 50px;
+					bottom: -38px;
+					left: 10px;
+				}
+			}
+		}
+		.ranking-title01{
+			border-color: #FFCF24;
+		}
+		.ranking-title02{
+			border-color:#A0A9B1;
+		}
+		.ranking-title03{
+			border-color:#B26A2B;
+		}
+		.ranking-title04{
+			border-color:#acd7ea;
+		}
+		.ranking-img01,
+		.ranking-img02,
+		.ranking-img03,
+		.ranking-img04{
+			width: 300px;
+			height: auto;
+			display: block;
+			@include grid-media($mobile){
+				margin: 0 auto;
+			}
+			@include grid-media($tablet){
+				float: left;
+				margin-right: 20px;
+			}
+			img{
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+			br,
+			img[width="1"]{
+				display: none;
+			}
+		}
+		.ranking-info01,
+		.ranking-info02,
+		.ranking-info03{
+			@include grid-media($tablet){
+				display: inline;
+			}
+			@include grid-media($mobile){
+				margin-bottom: 20px;
+			}
+		}
+		.clearfix{
+			height: 5px;
+		}
+	}
+	.ranking02,
+	.ranking03{
+		margin-top: 0px;
+	}
+	//評価表（グーテンベルク）
+	.gb-review-table-box{
+		.cps-table03{
+			table{
+				width: 100%;
+				border:1px solid #dedede;
+				border-collapse: collapse;
+				margin-bottom: 30px;
+				th,
+				td{
+					vertical-align: middle;
+					font-size: 0.9rem;
+					border:1px solid #dedede;
+					border-collapse: collapse;
+					letter-spacing: 0;
+					line-height: 1.2rem;
+				}
+				th,
+				tr td:first-child{
+					text-align: center;
+					background:#FFFAF0;
+					@include grid-media($mobile){
+						font-weight: 600;
+					}
+					@include grid-media($tablet){
+						font-weight: 500;
+					}
+				}
+				th.ranking-title{
+					padding: 12px;
+					font-size: 1.1em;
+					text-align: left;
+				}
+				td{
+					@include grid-media($mobile){
+						padding: 10px 7px;
+					}
+					@include grid-media($tablet){
+						padding: 7px 10px;
+					}
+				}
+				td.rankinginfo{
+					vertical-align: top;
+					text-align: left;
+				}
+				td img{
+					display: block;
+					margin: 0 auto;
+					margin-top: 0px;
+					margin-bottom: 0!important;
+					padding-top: 0;
+					padding-bottom: 0;
+				}
+				img.star{
+					width: 150px;
+					height: auto;
+				}
+				td.rankinginfo{
+					width: 70%!important;
+				}
+			}
+		}
+	}
+	.jin-keyboard{
+		margin: 0 5px;
+		padding: 4px 6px;
+		border: 1px solid #dedede;
+		background: #f6f6f6;
+		border-radius: 3px;
+		font-size: 0.84em;
+		box-shadow: 1px 1px 2px #eee;
+	}
+}
+.alignright {
+	@include grid-media($tablet){
+		margin: 20px 0px 20px auto;
+		text-align: right;
+	}
+
+}
+.alignleft {
+	@include grid-media($tablet){
+		margin: 20px auto 20px 0;
+	}
+}
+.aligncenter{
+		margin-left: auto;
+		margin-right: auto;
+}
+.t-aligncenter{
+	text-align: center;
+}
+img.aligncenter{
+	@include grid-media($tablet){
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include grid-media($mobile){
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 20px;
+		display: block;
+	}
+}
+img.alignright{
+	@include grid-media($tablet){
+		padding: 4px;
+		margin: 0 0 2px 20px;
+		display: inline;
+		float: right;
+	}
+	@include grid-media($mobile){
+		margin-bottom: 20px;
+		display: block;
+	}
+}
+img.alignleft {
+	@include grid-media($tablet){
+		padding: 4px;
+		margin: 0 20px 2px 0;
+		display: inline;
+		float: left;
+	}
+	@include grid-media($mobile){
+		margin-bottom: 20px;
+		display: block;
+	}
+}
+
+
+@include grid-media($tablet){
+	.xs-size{
+		font-size: 0.85rem;
+	}
+	.s-size{
+		font-size: 0.95rem;
+	}
+	.m-size{
+	}
+	.l-size{
+		font-size: 1.05rem;
+	}
+	.xl-size{
+		font-size: 1.1rem;
+	}
+}
+@include grid-media($mobile){
+	.xs-size-sp{
+		font-size: 0.85rem;
+	}
+	.s-size-sp{
+		font-size: 0.95rem;
+	}
+	.m-size-sp{
+	}
+	.l-size-sp{
+		font-size: 1.05rem;
+	}
+	.xl-size-sp{
+		font-size: 1.1rem;
+	}
+}
+
+
+/* テキストモードでのデフォルトカラー設定 */
+.c-red,
+.c-blue,
+.c-green{
+	font-weight: bold;
+}
+.c-red{
+	color:#F16F6F;
+}
+.c-blue{
+	color:#7695C9;
+}
+.c-green{
+	color:#76C983;
+}
+
+
+/* ページ内タグエリア */
+.tag-box{
+	margin-top: 30px;
+	a{
+		color: #555!important;
+		text-decoration: none!important;
+		border: 1px solid #ddd;
+		padding: 5px 8px;
+		border-radius: 2px;
+		font-size: 0.65rem;
+		letter-spacing: 0;
+		display: inline-block;
+		margin-bottom: 4px;
+		margin-right: 5px;
+	}
+	a:before{
+		font-family: "jin-icons";
+		content: "\e92c";
+		vertical-align: bottom;
+		line-height: 0.9rem;
+		@include trans01;
+	}
+}
+
+
+//ブロックごとの調整
+.cps-post-main a.wp-block-button__link{
+	text-decoration: none;
+}
+
+/* 外部リンクのあとにアイコンをつける 
+.entry-content a[target="_blank"]{
+	text-decoration:none!important;
+}
+.entry-content a[target="_blank"]::after{
+    font-family: "jin-icons";
+	content: "\e92c";
+	margin-left: 5px;
+}
+.entry-content a[target="_blank"].remove-icon::after {
+    display: none;
+}*/

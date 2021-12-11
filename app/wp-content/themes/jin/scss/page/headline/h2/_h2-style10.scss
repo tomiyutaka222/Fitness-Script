@@ -1,0 +1,45 @@
+/* CSS Document */
+@charset "utf-8";
+
+.h2-style10{
+	h2{
+		position: relative;
+		@include grid-media($mobile){
+			font-size: 1.45rem;
+			line-height: 1.8rem;
+			padding: 13px;
+			padding-left: 6px;
+			margin-top: 1.4rem;
+			margin-bottom: 1rem;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.65rem;
+			line-height: 2rem;
+			padding: 15px;
+			padding-left: 8px;
+			margin-top: 2.6rem;
+			margin-bottom: 1.6rem;
+		}
+	}
+	h2:before{
+		position: absolute;
+		content: "";
+		z-index: 0;
+		bottom: 0;
+		left: 0px;
+		width: 100%;
+		height: 4px;
+		border-radius: 4px;
+	}
+	h2:after{
+		position: absolute;
+		content: "";
+		z-index: 0;
+		top: 0;
+		left: 0px;
+		height: 4px;
+		border-radius: 4px;
+		width: 100%;
+	}
+}

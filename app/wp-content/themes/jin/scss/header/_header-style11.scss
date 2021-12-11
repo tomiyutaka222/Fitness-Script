@@ -1,0 +1,59 @@
+/* CSS Document */
+@charset "utf-8";
+
+#header-box.header-style11{
+	@include grid-media($tablet){
+		position: relative;
+		z-index: 3;
+		margin-top: 15px!important;
+	}
+}
+#header-box.header-style11{
+	@include grid-media($mobile){
+		filter: opacity(0.7);
+	}
+	@include grid-media($tablet){
+		width: calc(100% - 30px);
+		min-height: 60px;
+		border-radius: 2px;
+		margin: 0 auto;
+		@include paper;
+		background-color: transparent!important;
+	}
+	@include grid-media($pc){
+		width: 1140px;
+	}
+}
+#header-box.header-style11 .cps-info-bar a{
+	@include grid-media($tablet){
+		filter: opacity(0.7);
+		border-radius: 2px 2px 0 0;
+	}
+}
+#header-box .header-box11-bg{
+	position: relative;
+}
+#header-box .header-box11-bg:before{
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include grid-media($tablet){
+		filter: opacity(0.7);
+		border-radius: 0px 0px 2px 2px;
+		min-height: 60px;
+	}
+	@include grid-media($mobile){
+		display: none;
+	}
+}
+
+
+.header-style11 #header{
+	position: relative;
+	@include grid-media($pc){
+		width: 1140px;
+	}
+}

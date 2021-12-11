@@ -1,0 +1,79 @@
+/* CSS Document */
+@charset "utf-8";
+
+.share{
+	width: 100%;
+	margin-top: 50px;
+}
+.share-title{
+	text-align: center;
+	margin-bottom: 10px;
+	color: #888;
+	@include grid-media($mobile){
+		font-size: 1.4rem;
+	}
+	@include grid-media($tablet){
+		font-size: 1.6rem;
+	}
+}
+.share-top{
+	width: 100%;
+	display: block;
+	margin-bottom: 0;
+	margin-top: 0px;
+	padding: 0;
+	@include grid-media($mobile){
+		width: 100%;
+	}
+}
+// hatena bookmark
+.font-hatena {
+	&:before {
+		content: "B!";
+		font-family: Verdana;
+		font-weight: bold;
+	}
+}
+.sns-design-type01,
+.sns-design-type02{
+	.sns{
+		margin: 0;
+	}
+	.sns-top{
+		margin: 0;
+		margin-top: 0px;
+		padding-bottom: 15px;
+	}
+	.sns ol,
+	.sns-top ol{
+		display: flex;
+		justify-content: space-between;
+		list-style: none;
+		padding: 0!important;
+		li:after,
+		li:before{
+			display: none;
+		}
+	}
+	.sns li{
+		@include grid-media($mobile){
+			margin-bottom: 0px!important;
+		}
+	}
+	.sns-top li a span{
+		font-size: 0.65rem;
+	}
+	.sns-top li,
+	.sns li{
+		padding: 0!important;
+		width: 19.44%;
+		margin-right: 0.7%;
+		@include grid-media($mobile){
+			margin-right: 1.2%;
+		}
+	}
+	.sns-top li:last-of-type,
+	.sns li:last-of-type{
+			margin-right: 0;
+	}
+}

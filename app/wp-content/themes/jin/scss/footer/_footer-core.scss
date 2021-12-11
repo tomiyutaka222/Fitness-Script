@@ -1,0 +1,391 @@
+/* CSS Document */
+@charset "utf-8";
+
+footer{
+	padding: 15px 0px;
+	@include grid-media($mobile){
+		padding-top:15px;
+	}
+	#footer-box{
+		@include grid-container;
+		@include grid-media($mobile){
+			width: 100%;
+			text-align: center;
+			font-size:0.65rem;
+			font-weight: 400;
+		}
+		@include grid-media($tablet){
+			width: $tablet-width;
+			margin: 0 auto;
+			font-size:0.7rem;
+		}
+		@include grid-media($pc){
+			width: $pc-width;
+		}
+	}
+	.footer-inner{
+		@include grid-media($mobile){
+			@include grid-column(1, $layout1_0);
+		}
+		@include grid-media($tablet){
+			@include grid-column(1, $layout1);
+		}	
+		#privacy,
+		#law{
+			a{
+				padding: 0 15px;
+				border-right: 1px solid #ddd;
+				@include grid-media($mobile){
+					margin: 0 auto;
+				}
+				@include grid-media($tablet){
+					float: left;
+					font-weight: 300;
+				}
+			}
+		}
+		#privacy a{
+			border-left: 1px solid #ddd;
+		}
+		#copyright{
+			@include grid-media($mobile){
+				display: block;
+				clear: both;
+				margin-top: 10px;
+			}
+			@include grid-media($tablet){
+				float: right;
+				font-weight: 300;
+			}
+		}
+		#copyright-center{
+			@include grid-media($mobile){
+				display: block;
+				clear: both;
+			}
+			@include grid-media($tablet){
+				display: block;
+				margin: 0 auto;
+				text-align: center;
+				font-weight: 300;
+			}
+		}
+		#copyright-center,
+		#copyright{
+			.jin-ifont-copyright:before{
+				vertical-align: bottom;
+				font-size: 0.5rem;
+				margin-right: 1px;
+				@include grid-media($mobile){
+					line-height: 0.8rem;
+				}
+				@include grid-media($tablet){
+					line-height: 1rem;
+				}
+			}
+		}
+	}
+}
+
+
+/* フッターサイドメニュー */
+
+@include grid-media($mobile){
+	.sp-sidemenu-wrapper{
+		position: fixed;
+		bottom: 60px;
+		right: 13px;
+		z-index: 2;
+		#sp-sidemenu-toggle {
+			display: none;
+			overflow: hidden;
+		}
+		.sp-sidemenu-btn{
+			position: relative;
+			z-index: 3;
+			width: 58px;
+			height: 58px;
+			border-radius: 29px;
+			background: #b2e086;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+			transition: ease-out 0.3s;
+		}
+		.sp-sidemenu-btn:after{
+			position: absolute;
+			top: 11px;
+			right: 0px;
+			font-size: 1.3rem;
+			width: 58px;
+			text-align: center;
+			font-family: "jin-icons";
+			content: "\e922";
+			font-weight: 900;
+			color: #fff;
+			transition: 0.3s;
+		}
+		.sp-sidemenu-title{
+			position: absolute;
+			width: 58px;
+			text-align: center;
+			right: 0;
+			bottom: 8px;
+			font-size: 0.65rem;
+			font-weight: bold;
+			color: #fff;
+			letter-spacing: 0px!important;
+		}
+	}
+	#sp-sidemenu-toggle:checked ~ .sp-sidemenu-open .sp-sidemenu-btn{
+		animation-name: sp-sidemenu-btn-animate;
+		animation-duration: 0.4s;
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+	}
+	#sp-sidemenu-toggle:checked ~ .sp-sidemenu-open .sp-sidemenu-btn:after{
+		transform: rotate(-45deg) scale(1.1);
+	}
+	#sp-sidemenu-toggle:checked ~ .sp-sidemenu-box{
+		transform: translate3d(0%,0%,0);
+		filter: opacity(1);
+		pointer-events: auto;
+	}
+	#sp-sidemenu-toggle:checked ~ .sp-sidemenu-bg{
+		transform: scale(250);
+		border-radius: 500px;
+	}
+	#sp-sidemenu-toggle:checked ~ .sp-sidemenu-box .sp-sidemenu-menu .menu-box{
+		
+		$pages: 1, 2, 3, 4, 5;
+		@each $page in $pages {
+			$i: index($pages, $page);
+			li:nth-child(#{$i}) {
+				animation-name: sp-sidemenu-animate;
+				animation-duration: 0.4s;
+				animation-delay:0.15s * (6 - $i);
+				animation-fill-mode:forwards;
+				filter: opacity(0);
+			}
+		}
+	}
+	#sp-sidemenu-toggle:checked ~ .sp-sidemenu-box .sp-sidemenu-search{
+		animation-name: sp-sidemenu-search-animate;
+		animation-timing-function:cubic-bezier(0.61,0.75,0.58,1.17);
+		animation-duration: 0.82s;
+		animation-delay:0.77s;
+		animation-fill-mode:forwards;
+		filter: opacity(0);
+	}
+	#sp-sidemenu-toggle:checked #page-top{
+	}
+	.sp-sidemenu-box{
+		position: relative;
+		z-index: 3;
+		pointer-events: none;
+		bottom: 0;
+		right: 0;
+		max-width: 100%;
+		height: 100%;
+		filter: opacity(0);
+	}
+	.sp-sidemenu-bg{
+		position: fixed;
+		overflow: hidden;
+		z-index: 2;
+		bottom: 100px;
+		right: 40px;
+		width: 1.77%;
+		height: 1%;
+		border-radius: 500px;
+		background: #fff;
+		transition: ease-out 0.3s;
+		filter: opacity(0.95);
+	}
+	.sp-sidemenu-search{
+		position: absolute;
+		width: 290px;
+		bottom: 380px;
+		right:-320px;
+		filter: opacity(0);
+		.search-box{
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			text-align: center;
+			border-radius: 40px;
+			box-sizing: border-box;
+			opacity: 1;
+			input {
+				display:block;
+				outline: 0;
+				background:rgba(0,0,0,0.05);
+				width: 236px;
+				height: 50px;
+				border: 0;
+				padding: 12px 0 12px 15px;
+				box-sizing: border-box;
+				font-size: 16px;
+				border-radius: 40px 0 0 40px;
+			}
+			input[type="submit"]{
+				width: 50px;
+				height: 50px;
+				box-sizing: border-box;
+				line-height: 0;
+				font-family: "jin-icons";
+				content: "\e931";
+				top: 0px;
+				font-size: 20px;
+				padding-right: 15px;
+				z-index: 4;
+				text-align: center;
+				border-radius: 0 40px 40px 0;
+				color: #888;
+				@include trans02;
+			}
+		}
+	}
+	.sp-sidemenu-menu{
+		position: absolute;
+		overflow: hidden;
+		width: 320px;
+		bottom: 100px;
+		right: 5px;
+		ul li a:before{
+			display: none;
+		}
+		.menu-box{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-right: 0;
+			padding-left: 0;
+			width: 100%;
+			height: 100%;
+			li:nth-child(5),
+			li:nth-child(6),
+			li:nth-child(7),
+			li:nth-child(8){
+				display: none;
+			}
+		}
+		a{
+			text-align: right;
+			padding-top: 18px!important;
+			padding-bottom: 18px!important;
+			padding-right: 66px!important;
+			font-size: 1.05rem;
+			line-height: 1.3rem;
+		}
+		a:hover{
+			background: transparent!important;
+		}
+		a:hover span{
+			animation-name: sp-sidemenu-btn-animate;
+			animation-duration: 0.4s;
+		}
+		a span{
+			position: absolute;
+			width: 46px;
+			height: 46px;
+			border-radius: 23px;
+			padding-top: 13px;
+			padding-left: 0px;
+			background: #555;
+			text-align: center;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: #fff;
+			letter-spacing: 0px;
+			box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+		}
+		.jic:before{
+			padding-right: 0!important;
+		}
+	}
+}
+
+/* フッターメニュー */
+#sp-footer-box{
+	margin-top: 43px;
+}
+.footer-menu-sp{
+	display: none;
+	@include grid-media($mobile){
+		@include grid-container;
+		display: block;
+		position:fixed;
+		width: 100%;
+		bottom:0px;
+		z-index: 9999;
+		background: #fff;
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+	}
+	.menu-item{
+		width: 25%;
+		float: left;
+		margin: 0!important;
+		-webkit-box-sizing: border-box;
+            box-sizing: border-box;
+		a{
+			display: block;
+			font-size: 0.65em;
+			font-weight: 400;
+			padding:8px 5px;
+			padding-top: 6px;
+			text-align: center;
+			background: #fff;
+			letter-spacing: 0;
+			@include trans01;
+		}
+		.jic:before{
+			font-size: 1.1rem;
+			line-height: 1.1rem;
+		}
+		a:hover{
+			background: #ddd;
+		}
+		span{
+			display: block;
+			font-size: 1.4em;
+		}
+	}
+	.menu-item:nth-child(5n),
+	.menu-item:nth-child(6n),
+	.menu-item:nth-child(7n),
+	.menu-item:nth-child(8n),
+	.menu-item:nth-child(9n){
+		display: none;
+	}
+	.menu-item:first-child{
+		border-left: none;
+	}
+	.current-menu-item a{
+		position: relative;
+	}
+	.current-menu-item a:before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		opacity: 0.07;
+		background: #fff;
+	}
+}
+.footer-menu-sp-in{
+	bottom:0px;
+}
+
+
+footer{
+	.widgettitle{
+		border-bottom: 2px solid $base-color;
+		margin-bottom: 15px;
+		padding-bottom: 13px;
+		font-size: 1.1rem;
+		font-weight: 500;
+	}
+}

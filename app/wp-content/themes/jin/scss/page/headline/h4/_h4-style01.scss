@@ -1,0 +1,22 @@
+/* CSS Document */
+@charset "utf-8";
+.h4-style01{
+	h4{
+		border-left: 2px solid $base-color;
+		@include grid-media($mobile){
+			font-size: 1.05rem;
+			line-height: 1.6rem;
+			padding: 2px 8px;
+			margin-top: 1rem;
+			margin-bottom: 0.8rem;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.3rem;
+			line-height: 1.8rem;
+			padding: 2px 12px;
+			margin-top: 1rem;
+			margin-bottom: 0.8rem;
+		}
+	}
+}

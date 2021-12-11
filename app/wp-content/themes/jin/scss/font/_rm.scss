@@ -1,0 +1,154 @@
+/* CSS Document */
+@charset "utf-8";
+
+body#rm-style{
+	font-family: 'Rounded Mplus 1c', sans-serif;
+	input[type="text"],
+	input[type="search"]{
+		font-family: 'Rounded Mplus 1c', sans-serif;
+	}
+	@include grid-media($mobile){
+		font-weight: 400;
+		ul.menu-box > li > a:before{
+			top: 20px;
+		}
+	}
+	@include grid-media($tablet){
+		font-weight: 300;
+	}
+	p{
+		@include grid-media($mobile){
+			font-weight: 400;
+		}
+		@include grid-media($tablet){
+			font-weight: 300;
+		}
+	}
+	.sp-menu-box ul li a{
+		@include grid-media($mobile){
+			font-weight: 500!important;
+		}
+	}
+	.sp-menu-box ul li ul li a{
+		@include grid-media($mobile){
+			font-weight: 300!important;
+		}
+	}
+	.sp-menu-box ul.menu-box li a:before{
+		@include grid-media($mobile){
+			left: 0px;
+			line-height: 0;
+			font-size: 2.4rem;
+		}
+	}
+	.sp-menu-box ul.menu-box > li > ul > li a:before{
+		@include grid-media($mobile){
+			left: 7px;
+		}
+	}
+	.cps-post-title,
+	.new-entry-item-title,
+	.info-title,
+	#prev-next p,
+	.myname,
+	.widgettitle,
+	.toppost-list-box label,
+	.pickup-title,
+	.profile-name{
+		@include grid-media($mobile){
+			font-weight: 400!important;
+		}
+		@include grid-media($tablet){
+			font-weight: 400!important;
+		}
+	}
+	.kaisetsu-box1-title,
+	.kaisetsu-box2-title,
+	.kaisetsu-box3-title,
+	.kaisetsu-box4-title,
+	.kaisetsu-box5-title,
+	.cps-post-main-box h2,
+	.cps-post-main-box h3,
+	.cps-post-main-box h4,
+	.cps-post-main-box h5,
+	.ranking-title01,
+	.ranking-title02,
+	.ranking-title03,
+	.cps-post-main table.cps-table03 th,
+	.related-entry-headline-text span{
+		@include grid-media($mobile){
+			font-weight: 500!important;
+		}
+		@include grid-media($tablet){
+			font-weight: 400!important;
+		}
+	}
+	.top-image-meta,
+	.fixed-content a,
+	.cps-post-date,
+	.myintro,
+	.myjob,
+	.textwidget,
+	.tagcloud a,
+	.profile-desc,
+	.new-entry-item-title,
+	.widget ul li a,
+	.widget_categories ul li a,
+	.widget_recent_comments .recentcomments{
+		font-weight: 400!important;
+	}
+	.post-list-link .entry-title{
+		font-weight: 400;
+	}
+	.kaisetsu-box1:after,
+	.kaisetsu-box2:after,
+	.kaisetsu-box4:after,
+	.kaisetsu-box5:after,
+	.innerlink-box1:after{
+		font-family: "jin-icons",'Rounded Mplus 1c', sans-serif;
+	}
+	.ef,
+	#prev-next a.prev:after,
+	#prev-next a.next:after{
+		font-family: 'Quicksand','Rounded Mplus 1c', sans-serif;
+	}
+	strong{
+		@include grid-media($mobile){
+			font-weight: 700!important;
+		}
+		@include grid-media($tablet){
+			font-weight: 500!important;
+		}
+	}
+	.widget_nav_menu ul > li > a:before,
+	.widget_categories ul > li > a:before{
+		padding-top: 0px;
+		top:23px;
+	}
+	.widget_nav_menu ul > li > ul > li > a:before,
+	.widget_categories ul > li > ul > li > a:before{
+		top:12px;
+	}
+	.widget_nav_menu ul > li > ul > li > ul > li > a:before,
+	.widget_categories ul > li > ul > li > ul > li > a:before{
+		top:2px;
+	}
+	@include grid-media($tablet){
+		#breadcrumb .bcHome{
+			span:before{
+				top: -7px;
+			}
+		}
+	}
+	.widget_recent_comments ul li > a:before{
+		top: 0px;
+	}
+	.blog-card-hl-box{
+		@include grid-media($tablet){
+			padding-top: 6px;
+		}
+	}
+	.blog-card .blog-card-hl:after{
+		top: 8px;
+	}
+}

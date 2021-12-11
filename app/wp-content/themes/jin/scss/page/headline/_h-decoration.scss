@@ -1,0 +1,318 @@
+/* CSS Document */
+@charset "utf-8";
+
+.jin-h2-icons{
+	h2{
+		@include grid-media($mobile){
+			padding-left: 10px!important;
+		}
+		@include grid-media($tablet){
+			padding-left: 12px!important;
+		}
+		.jic:before{
+			@include grid-media($mobile){
+				padding-right: 4px;
+				font-size: 1.5rem;
+				line-height: 1.4rem;
+				vertical-align: bottom;
+			}
+			@include grid-media($tablet){
+				padding-right: 2px;
+				font-size: 1.5rem;
+				line-height: 2rem;
+				vertical-align: bottom;
+			}
+		}
+		.jin-ifont-check:before{
+			@include grid-media($mobile){
+				font-size: 1.25rem;
+				line-height: 1.5rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.4rem;
+			}
+		}
+		.jin-ifont-checkcircle:before{
+			@include grid-media($mobile){
+				font-size: 1.25rem;
+			}
+			@include grid-media($tablet){
+				padding-right: 5px;
+				font-size: 1.4rem;
+			}
+		}
+		.jin-ifont-clover:before{
+			@include grid-media($mobile){
+				font-size: 1.25rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.4rem;
+			}
+		}
+		.jin-ifont-bookmark:before{
+			@include grid-media($mobile){
+				font-size: 1.1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+.jin-h2-icons.h2-style01,
+.jin-h2-icons.h2-style03,
+.jin-h2-icons.h2-style05{
+	h2{
+		.jic:before{
+			color:#fff;
+		}
+	}
+}
+.jin-h2-icons.h2-style04{
+	h2{
+		padding-left: 0px!important;
+		.jic:before{
+			@include grid-media($mobile){
+			}
+			@include grid-media($tablet){
+				
+			}
+		}
+	}
+}
+.jin-h2-icons.h2-style01{
+	h2{
+		@include grid-media($mobile){
+			padding-left: 11px!important;
+		}
+	}
+}
+.jin-h2-icons.h2-style06,
+.jin-h2-icons.h2-style07,
+.jin-h2-icons.h2-style09{
+	h2{
+		@include grid-media($mobile){
+			padding-left: 5px!important;
+		}
+		@include grid-media($tablet){
+			padding-left: 6px!important;
+		}
+	}
+}
+.jin-h2-icons.h2-style08{
+	h2{
+		padding-left: 22px!important;
+	}
+}
+.jin-h2-icons.h2-style10{
+	h2{
+		padding-left: 6px!important;
+	}
+}
+
+.jin-h3-icons{
+	h3{
+		@include grid-media($mobile){
+			padding-left: 8px!important;
+		}
+		@include grid-media($tablet){
+			padding-left: 10px!important;
+		}
+		.jic:before{
+			@include grid-media($mobile){
+				padding-right: 2px;
+				line-height: 1.1rem;
+				vertical-align: bottom;
+				font-size: 1.2rem;
+			}
+			@include grid-media($tablet){
+				padding-right: 2px;
+				line-height: 2rem;
+				vertical-align: bottom;
+				font-size: 1.4rem;
+			}
+		}
+		.jin-ifont-check:before{
+			@include grid-media($mobile){
+				font-size: 1.1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.25rem;
+			}
+		}
+		.jin-ifont-checkcircle:before{
+			@include grid-media($mobile){
+				padding-right: 4px;
+			}
+			@include grid-media($tablet){
+				padding-right: 5px;
+			}
+		}
+		.jin-ifont-clover:before{
+			@include grid-media($mobile){
+				font-size: 1.1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.25rem;
+			}
+		}
+		.jin-ifont-bookmark:before{
+			@include grid-media($mobile){
+				font-size: 1.1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+.jin-h3-icons.h3-style01,
+.jin-h3-icons.h3-style04{
+	h3{
+		@include grid-media($mobile){
+			padding-left: 5px!important;
+		}
+		@include grid-media($tablet){
+			padding-left: 6px!important;
+		}
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.3rem;
+			}
+		}
+	}
+}
+.jin-h3-icons.h3-style02{
+	h3{
+		@include grid-media($mobile){
+			padding-left: 12px!important;
+		}
+		@include grid-media($tablet){
+			padding-left: 14px!important;
+		}
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.3rem;
+			}
+		}
+	}
+}
+.jin-h3-icons.h3-style03{
+	h3{
+		padding-left: 14px!important;
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.3rem;
+			}
+		}
+	}
+}
+
+.jin-h4-icons{
+	h4{
+		@include grid-media($mobile){
+			padding-left: 8px!important;
+		}
+		@include grid-media($tablet){
+			padding-left: 8px!important;
+		}
+		.jic:before{
+			@include grid-media($mobile){
+				padding-right: 1px;
+				font-size: 1rem;
+			}
+			@include grid-media($tablet){
+				padding-right: 1px;
+				font-size: 1.3rem;
+			}
+		}
+		.jin-ifont-check:before{
+			@include grid-media($mobile){
+				font-size: 1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.2rem;
+			}
+		}
+		.jin-ifont-checkcircle:before{
+			@include grid-media($mobile){
+				padding-right: 3px;
+			}
+			@include grid-media($tablet){
+				padding-right: 5px;
+			}
+		}
+		.jin-ifont-clover:before{
+			@include grid-media($mobile){
+				font-size: 1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.1rem;
+				line-height: 2rem;
+			}
+		}
+		.jin-ifont-bookmark:before{
+			@include grid-media($mobile){
+				font-size: 1rem;
+			}
+			@include grid-media($tablet){
+				font-size: 1.1rem;
+				line-height: 1.9rem;
+			}
+		}
+	}
+}
+.jin-h4-icons.h4-style01{
+	h4{
+		padding-left: 10px!important;
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.1rem;
+			}
+		}
+	}
+}
+.jin-h4-icons.h4-style02{
+	h4{
+		padding-left: 10px!important;
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.1rem;
+			}
+		}
+	}
+}
+.jin-h4-icons.h4-style03,
+.jin-h4-icons.h4-style04{
+	h4{
+		padding-left: 2px!important;
+	}
+}
+.jin-h4-icons.h4-style03{
+	h4{
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.1rem;
+			}
+		}
+		.jin-ifont-clover:before{
+			@include grid-media($mobile){
+				line-height: 1.4rem;
+			}
+		}
+		.jin-ifont-bookmark:before{
+			@include grid-media($mobile){
+				line-height: 1.2rem;
+			}
+		}
+	}
+}
+.jin-h4-icons.h4-style04{
+	h4{
+		.jic:before{
+			@include grid-media($mobile){
+				line-height: 1.4rem;
+			}
+		}
+	}
+}

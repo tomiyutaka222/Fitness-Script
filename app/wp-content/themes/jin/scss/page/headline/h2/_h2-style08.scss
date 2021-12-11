@@ -1,0 +1,60 @@
+/* CSS Document */
+@charset "utf-8";
+
+.h2-style08{
+	h2{
+		position: relative;
+		border-bottom: 2px solid #ccc;
+		@include grid-media($mobile){
+			font-size: 1.45rem;
+			line-height: 1.8rem;
+			padding: 13px;
+			padding-left: 24px;
+			padding-bottom: 4px;
+			margin-top: 1.4rem;
+			margin-bottom: 1rem;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.65rem;
+			line-height: 2rem;
+			padding: 15px;
+			padding-left: 24px;
+			padding-bottom: 6px;
+			margin-top: 2.6rem;
+			margin-bottom: 1.6rem;
+		}
+	}
+	h2:before{
+		content: "";
+		position: absolute;
+		background: #fff;
+		border: 1px solid;
+		border-color: $link_color;
+		top: 0;
+		left: 0.4em;
+		height: 12px;
+		width: 12px;
+		-webkit-transform: rotate(45deg);
+		transform: rotate(45deg);
+		@include grid-media($mobile){
+			top: 0;
+			left: 0.4em;
+		}
+	}
+	h2:after{
+		content: "";
+		position: absolute;
+		background-color:$link_color;
+		top: 0.8em;
+		left: 0.1em;
+		height: 8px;
+		width: 8px;
+		-webkit-transform: rotate(15deg);
+		transform: rotate(15deg);
+		@include grid-media($mobile){
+			top: 1em;
+			left: 0;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+/* CSS Document */
+@charset "utf-8";
+
+
+.widget label {
+	display:block;
+}
+.widget .wpcf7-text,
+.widget .wpcf7-textarea{
+	margin-bottom:20px!important;
+}
+.wpcf7{
+	margin: 30px auto!important;
+	padding:40px 30px!important;
+	padding-bottom: 0px!important;
+	background:rgba(215,215,215,0.15);
+	@include grid-media($mobile){
+		width: 100%;
+	}
+	@include grid-media($tablet){
+		width: 80%;
+	}
+}
+.wpcf7-form-control-wrap input[type="text"],
+.wpcf7-form-control-wrap input[type="email"],
+.wpcf7-form-control-wrap textarea{
+	box-sizing: border-box;
+	width: 100%;
+	border-radius:2px;
+	border: 1px solid #ccc;
+	padding: 7px 10px;
+	font-size: 1em;
+	margin-bottom: -10px!important;
+	-webkit-appearance: none;
+}
+.wpcf7-form p{
+	margin-bottom: 0px!important;
+	margin-top: -10px!important;
+}
+.wpcf7-form input[type="submit"]{
+	border-radius:2px;
+	@include trans01;
+	border: 1px solid #ddd;
+	padding: 7px 50px;
+	font-size: 1em;
+	display: block;
+	margin: 0 auto;
+	background: #ddd;
+	cursor: pointer;
+	color: #fff;
+	margin-top: 0px;
+}
+.wpcf7-form input[type="submit"]:hover{
+	background: #ccc;
+	border: 1px solid #ccc;
+}

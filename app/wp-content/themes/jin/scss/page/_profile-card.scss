@@ -1,0 +1,167 @@
+/* CSS Document */
+@charset "utf-8";
+
+
+.profile-card{
+	border-top: 1px solid #eee;
+	padding:0 20px;
+	padding-top: 40px;
+	position: relative;
+	margin-top: 50px;
+	@include grid-media($mobile){
+		margin-bottom: 40px;
+	}
+	@include grid-media($tablet){
+		margin-bottom: 20px;
+	}
+	.profile-title{
+		position: absolute;
+		top: 0px;
+		background: #eee;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: #fff;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		@include grid-media($mobile){
+			left: 20px;
+			padding: 5px 12px;
+		}
+		@include grid-media($tablet){
+			right: 20px;
+			padding: 7px 15px;
+			padding-top: 6px;
+		}
+	}
+	.profile-flexbox{
+		@include grid-media($mobile){
+			display: block;
+		}
+		@include grid-media($tablet){
+			display: flex;
+		}
+	}
+	.profile-thumbnail{
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		overflow: hidden;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.18);
+		@include grid-media($mobile){
+			margin: 0 auto;
+		}
+		@include grid-media($tablet){
+			margin-right: 20px;
+		}
+	}
+	.profile-meta{
+		@include grid-media($mobile){
+			margin-top: 10px;
+		}
+		.profile-name{
+			font-family: 'ヒラギノ角ゴ ProN W3', Hiragino Sans, 'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-seri;
+			@include grid-media($mobile){
+				text-align: center;
+				font-weight: 700;
+			}
+			@include grid-media($tablet){
+				font-weight: 500;
+			}
+		}
+		.profile-desc{
+			font-size: 0.85rem;
+			line-height: 1.25rem;
+			font-weight: 300;
+			margin-top: 20px;
+		}
+	}
+	.profile-link-box{
+		margin-top: 30px;
+		@include grid-media($mobile){
+			display: block;
+		}
+		@include grid-media($tablet){
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.profile-link{
+			flex:2;
+			font-size: 0.85rem;
+			word-break: break-all;
+			word-wrap: break-word;
+			@include grid-media($mobile){
+				margin-left: 0px;
+			}
+			@include grid-media($tablet){
+				margin-left: 8px;
+				margin-right: 20px;
+			}
+			span{
+				font-size: 0.75rem;
+			}
+			svg{
+				margin-right: 2px;
+			}
+		}
+		.profile-follow{
+			flex: 1;
+		}
+		.jic-type:before{
+			vertical-align: bottom;
+			padding-bottom: 0;
+			padding:2px;
+		}
+	}
+}
+.profile-follow{
+	display: flex;
+	align-items: center;
+	@include grid-media($mobile){
+		justify-content: center;
+		margin-top: 20px;
+	}
+	@include grid-media($tablet){
+		justify-content: flex-end;
+	}
+	a{
+		@include trans02;
+		display: block;
+		color:#fff;
+		margin: 0 3px;
+		overflow: hidden;
+		text-decoration: none!important;
+		font-size: 0.9rem;
+	}
+	a:hover{
+		color: $accent-color!important;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	.facebook-sns a{
+		margin: 0 4px;
+	}
+	.twitter-sns a{
+		margin: 0px 2px;
+	}
+	.line-sns a{
+		margin: 0px 4px;
+	}
+	.instagram-sns a{
+	}
+	.youtube-sns a{
+	}
+	.contact-sns a{
+		margin: 0px 3px;
+	}
+	a:hover{
+		color: $accent-color!important;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+}
+.profile-follow.center-pos{
+	@include grid-media($tablet){
+		justify-content: center;
+	}
+}

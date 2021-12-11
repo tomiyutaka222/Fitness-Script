@@ -1,0 +1,270 @@
+/* CSS Document */
+@charset "utf-8";
+
+.pickup-contents-box{
+	width: 100%;
+	@include grid-media($mobile){
+		margin-top: 0px;
+		margin-bottom: 10px;
+		padding: 0;
+	}
+	@include grid-media($tablet){
+		padding: 20px 20px;
+		margin-bottom: -10px;
+	}
+	@include grid-media($pc){
+		padding: 30px 0;
+	}
+	.pickup-contents:before{
+		@include grid-media($mobile){
+			position: absolute;
+			content: "";
+			width: calc(100% + 15px);
+			height: 100%;
+			background: #ccc;
+			top:0px;
+			left: -15px;
+			opacity: 0.12;
+		}
+	}
+	.pickup-contents{
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		@include grid-media($mobile){
+			width: calc(100% - 30px);
+			padding: 15px 15px;
+			position: relative;
+		}
+		@include grid-media($tablet){
+			width: 100%;
+			justify-content: center;
+		}
+		@include grid-media($pc){
+			width: $pc_width - 60px;
+			margin: 0 auto;
+			padding: 0 0px;
+		}
+		li{
+			height: auto;
+			@include grid-media($mobile){
+				width: 48.5%;
+				margin-right: 3%;
+				margin-top: 10px;
+			}
+			@include grid-media($tablet){
+				width: 23.575%;
+				margin-right: 1.9%;
+				margin-top: 20px;
+			}
+			a{
+				-webkit-transition: all 0s;
+   		 		transition: all 0s;
+				.pickup-image{
+					position: relative;
+					@include grid-media($mobile){
+						border-radius: 2px;
+						background: #fff;
+						box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
+					}
+					@include grid-media($tablet){
+						@include paper;
+					}
+					img{
+						width: 100%;
+						height: auto;
+						vertical-align: bottom;
+						opacity: 0.9;
+						background: #fff;
+						-webkit-transition: all .4s;
+						transition: all .4s;
+						border-radius: 2px;
+					}
+					.pickup-title{
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						letter-spacing: 1px;
+						-webkit-transform: translateY(-50%) translateX(-50%);
+						transform: translateY(-50%) translateX(-50%);
+						text-align: center;
+						background-color:rgba(255,255,255,0.9);
+						border-radius: 30px;
+						z-index: 2;
+						@include trans02;
+						@include grid-media($mobile){
+							font-size: 11px;
+							font-weight: 700;
+							letter-spacing: 0;
+							width: 70%;
+							padding: 5px 10px;
+							border: 2px solid #ddd;
+						}
+						@include grid-media($tablet){
+							font-size: 11px;
+							font-weight: 500;
+							width: 65%;
+							padding: 5px 10px;
+							border: 3px solid #ddd;
+						}
+						@include grid-media($pc_view){
+							font-size: 14px;
+							padding: 7px 15px;
+						}
+					}
+				}
+				.pickup-image:after{
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					
+					-webkit-transform: translateY(-50%) translateX(-50%);
+					transform: translateY(-50%) translateX(-50%);
+					width: 88%;
+					height: 80%;
+					-webkit-transition: all .4s;
+						transition: all .4s;
+					@include grid-media($mobile){
+						border: 1px solid rgba(255,255,255,0.65);
+					}
+					@include grid-media($tablet){
+						border: 2px solid rgba(255,255,255,0.65);
+					}
+				}
+			}
+			a:hover .pickup-image img{
+				-webkit-transform: scale(1.03);
+				transform: scale(1.03);
+				opacity: 0.7;
+			}
+			a:hover .pickup-image:after{
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+			}
+		}
+		li:first-child,
+		li:nth-child(2){
+			@include grid-media($mobile){
+				margin-top: 0px;
+			}
+		}
+		li:nth-child(2n){
+			@include grid-media($mobile){
+				margin-right: 0px;
+			}
+		}
+		li:nth-child(4n){
+			margin-right: 0;
+		}
+	}
+}
+.swiper-container{
+	@include grid-media($mobile){
+		width: 92%;
+		padding: 0 4%;
+		min-height: 175px;
+		margin: 0 auto;
+	}
+	@include grid-media($tablet){
+		width: 100%;
+		height: 200px;
+	}
+	@include grid-media($pc_view){
+		height: 210px;
+	}
+	@include grid-media($pc){
+		width: $pc_width - 60px;
+		margin: 0 auto;
+	}
+}
+
+
+.pickup-contents-box-post-type{
+	width: 100%;
+	@include grid-media($mobile){
+		margin-top: 15px;
+		margin-bottom: 10px;
+		padding: 0;
+	}
+	@include grid-media($tablet){
+		padding: 30px 30px;
+		padding-bottom: 0;
+	}
+	@include grid-media($pc){
+		padding: 30px 0px;
+		padding-bottom: 0px;
+	}
+	.pickup-contents{
+		padding: 0;
+		li{
+			height: auto;
+			@include grid-media($mobile){
+				width: 48%;
+				margin-right: 4%;
+			}
+			@include grid-media($tablet){
+				width: 18.48%;
+			}
+			a{
+				.pickup-image{
+					overflow: hidden;
+					position: relative;
+					@include grid-media($mobile){
+						border-radius: 2px;
+						background: #fff;
+						box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.18);
+					}
+					@include grid-media($tablet){
+						@include paper;
+					}
+					img{
+						width: 100%;
+						height: auto;
+						display: block;
+						@include trans02;
+					}
+					.pickup-cat{
+						position: absolute;
+						top: 7px;
+						left: 7px;
+						color: #fff;
+						background: $base-color;
+						border-radius: 15px;
+						letter-spacing: 0;
+						@include grid-media($mobile){
+							font-size: 0.5rem;
+							padding: 1px 8px;
+							padding-bottom: 2px;
+						}
+						@include grid-media($tablet){
+							font-size: 0.5rem;
+							padding: 2px 10px;
+						}
+					}
+				}
+				.pickup-title{
+					margin-top: 7px;
+					@include grid-media($mobile){
+						font-size: 0.75rem;
+						font-weight: 500;
+						padding: 0 5px;
+						line-height: 1rem;
+					}
+					@include grid-media($tablet){
+						font-size: 0.75rem;
+						font-weight: 500;
+						padding: 0 3px;
+						line-height: 1.15rem;
+					}
+				}
+			}
+			a:hover .pickup-image img{
+				-webkit-transform: scale(1.02);
+				transform: scale(1.02);
+				opacity: 0.8;
+			}
+		}
+	}
+}

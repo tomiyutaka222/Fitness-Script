@@ -1,0 +1,698 @@
+/* CSS Document */
+@charset "utf-8";
+
+@font-face {
+  font-family: 'jin-icons';
+  src:
+    url('font/jin-icons/fonts/jin-icons.ttf?c16tcv') format('truetype'),
+    url('font/jin-icons/fonts/jin-icons.woff?c16tcv') format('woff'),
+    url('font/jin-icons/fonts/jin-icons.svg?c16tcv#jin-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="jin-ifont-"], [class*=" jin-ifont-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'jin-icons' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	will-change: transform;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class^="jin-ifont-"]:before, [class*=" jin-ifont-"]:before{
+	font-size: 1.1em;
+	display: block;
+	will-change: transform;
+}
+
+.jin-ifont-account:before {
+  content: "\e900";
+}
+.jin-ifont-archive:before {
+  content: "\e901";
+}
+.jin-ifont-arrowcircle:before {
+  content: "\e902";
+}
+.jin-ifont-arrowtop:before {
+  content: "\e903";
+}
+.jin-ifont-arrow:before {
+  content: "\e904";
+}
+.jin-ifont-batu:before {
+  content: "\e905";
+}
+.jin-ifont-book:before {
+  content: "\e906";
+}
+.jin-ifont-bulb:before {
+  content: "\e907";
+}
+.jin-ifont-cart:before {
+  content: "\e908";
+}
+.jin-ifont-caution:before {
+  content: "\e909";
+}
+.jin-ifont-checkcircle:before {
+  content: "\e90a";
+}
+.jin-ifont-check:before {
+  content: "\e90b";
+}
+.jin-ifont-clipboard:before {
+  content: "\e90c";
+}
+.jin-ifont-comment:before {
+  content: "\e90d";
+}
+.jin-ifont-copy:before {
+  content: "\e90e";
+}
+.jin-ifont-crown:before {
+  content: "\e90f";
+}
+.jin-ifont-arrowdouble:before {
+  content: "\e910";
+}
+.jin-ifont-droppin:before {
+  content: "\e911";
+}
+.jin-ifont-facebook:before {
+  content: "\e912";
+}
+.jin-ifont-flag:before {
+  content: "\e913";
+}
+.jin-ifont-folder:before {
+  content: "\e914";
+}
+.jin-ifont-gear:before {
+  content: "\e915";
+}
+.jin-ifont-heart:before {
+  content: "\e916";
+}
+.jin-ifont-home:before {
+  content: "\e917";
+}
+.jin-ifont-information:before {
+  content: "\e918";
+}
+.jin-ifont-instagram:before {
+  content: "\e919";
+}
+.jin-ifont-like:before {
+  content: "\e91a";
+}
+.jin-ifont-line:before {
+  content: "\e91b";
+}
+.jin-ifont-mail:before {
+  content: "\e91c";
+}
+.jin-ifont-maru:before {
+  content: "\e91d";
+}
+.jin-ifont-mobile:before {
+  content: "\e91e";
+}
+.jin-ifont-navi:before {
+  content: "\e91f";
+}
+.jin-ifont-pc:before {
+  content: "\e920";
+}
+.jin-ifont-pencil:before {
+  content: "\e921";
+}
+.jin-ifont-plus:before {
+  content: "\e922";
+}
+.jin-ifont-question:before {
+  content: "\e923";
+}
+.jin-ifont-quote:before {
+  content: "\e924";
+}
+.jin-ifont-relatedpost:before {
+  content: "\e925";
+}
+.jin-ifont-reload:before {
+  content: "\e926";
+}
+.jin-ifont-reply:before {
+  content: "\e927";
+}
+.jin-ifont-speaker:before {
+  content: "\e928";
+}
+.jin-ifont-starblank:before {
+  content: "\e929";
+}
+.jin-ifont-starhalf:before {
+  content: "\e92a";
+}
+.jin-ifont-star:before {
+  content: "\e92b";
+}
+.jin-ifont-tag:before {
+  content: "\e92c";
+}
+.jin-ifont-twitter:before {
+  content: "\e92d";
+}
+.jin-ifont-unlike:before {
+  content: "\e92e";
+}
+.jin-ifont-watch:before {
+  content: "\e92f";
+}
+.jin-ifont-youtube:before {
+  content: "\e930";
+}
+.jin-ifont-search:before {
+  content: "\e931";
+}
+.jin-ifont-arrowbottom:before {
+  content: "\e932";
+}
+.jin-ifont-arrowleft:before {
+  content: "\e933";
+}
+.jin-ifont-blogtext:before {
+  content: "\e934";
+}
+.jin-ifont-clover:before {
+  content: "\e935";
+}
+.jin-ifont-post:before {
+  content: "\e936";
+}
+.jin-ifont-facebook-t:before {
+  content: "\e937";
+}
+.jin-ifont-pocket:before {
+  content: "\e938";
+}
+.jin-ifont-bookmark:before {
+  content: "\e939";
+}
+.jin-ifont-copyright:before {
+  content: "\e93a";
+}
+.jin-ifont-inazuma:before {
+  content: "\e93b";
+}
+.jin-ifont-share:before {
+  content: "\e93c";
+}
+.jin-ifont-spanner:before {
+  content: "\e93d";
+}
+.jin-ifont-books:before {
+  content: "\e93e";
+}
+.jin-ifont-calendar:before {
+  content: "\e93f";
+}
+.jin-ifont-coin:before {
+  content: "\e940";
+}
+.jin-ifont-illust:before {
+  content: "\e941";
+}
+.jin-ifont-lock:before {
+  content: "\e942";
+}
+.jin-ifont-mailsend:before {
+  content: "\e943";
+}
+.jin-ifont-movie:before {
+  content: "\e944";
+}
+.jin-ifont-photo:before {
+  content: "\e945";
+}
+.jin-ifont-program:before {
+  content: "\e946";
+}
+.jin-ifont-website:before {
+  content: "\e947";
+}
+.jin-ifont-writer:before {
+  content: "\e948";
+}
+.jin-ifont-coincover:before {
+  content: "\e949";
+}
+.jin-ifont-airline:before {
+  content: "\e94a";
+}
+.jin-ifont-arrowbcircle:before {
+  content: "\e94b";
+}
+.jin-ifont-arrowb:before {
+  content: "\e94c";
+}
+.jin-ifont-arrowclear:before {
+  content: "\e94d";
+}
+.jin-ifont-arrowsquare:before {
+  content: "\e94e";
+}
+.jin-ifont-baby:before {
+  content: "\e94f";
+}
+.jin-ifont-bike:before {
+  content: "\e950";
+}
+.jin-ifont-birthdaycake:before {
+  content: "\e951";
+}
+.jin-ifont-bitcoin:before {
+  content: "\e952";
+}
+.jin-ifont-bitcoinwallet:before {
+  content: "\e953";
+}
+.jin-ifont-bookopen:before {
+  content: "\e954";
+}
+.jin-ifont-bottoms:before {
+  content: "\e955";
+}
+.jin-ifont-cafe:before {
+  content: "\e956";
+}
+.jin-ifont-camera:before {
+  content: "\e957";
+}
+.jin-ifont-car:before {
+  content: "\e958";
+}
+.jin-ifont-cardboardbox3:before {
+  content: "\e959";
+}
+.jin-ifont-cardboardbox:before {
+  content: "\e95a";
+}
+.jin-ifont-cat:before {
+  content: "\e95b";
+}
+.jin-ifont-chick:before {
+  content: "\e95c";
+}
+.jin-ifont-conditioner:before {
+  content: "\e95d";
+}
+.jin-ifont-cosme:before {
+  content: "\e95e";
+}
+.jin-ifont-couple:before {
+  content: "\e95f";
+}
+.jin-ifont-creditcard:before {
+  content: "\e960";
+}
+.jin-ifont-datsumou:before {
+  content: "\e961";
+}
+.jin-ifont-diamond:before {
+  content: "\e962";
+}
+.jin-ifont-dinner:before {
+  content: "\e963";
+}
+.jin-ifont-dog:before {
+  content: "\e964";
+}
+.jin-ifont-download:before {
+  content: "\e965";
+}
+.jin-ifont-drag:before {
+  content: "\e966";
+}
+.jin-ifont-dumbbell:before {
+  content: "\e967";
+}
+.jin-ifont-earphone:before {
+  content: "\e968";
+}
+.jin-ifont-female:before {
+  content: "\e969";
+}
+.jin-ifont-flower:before {
+  content: "\e96a";
+}
+.jin-ifont-folkspoon:before {
+  content: "\e96b";
+}
+.jin-ifont-game:before {
+  content: "\e96c";
+}
+.jin-ifont-girl:before {
+  content: "\e96d";
+}
+.jin-ifont-graph:before {
+  content: "\e96e";
+}
+.jin-ifont-handbag:before {
+  content: "\e96f";
+}
+.jin-ifont-headphone:before {
+  content: "\e970";
+}
+.jin-ifont-homewifi:before {
+  content: "\e971";
+}
+.jin-ifont-kid:before {
+  content: "\e972";
+}
+.jin-ifont-kirakira:before {
+  content: "\e973";
+}
+.jin-ifont-link:before {
+  content: "\e974";
+}
+.jin-ifont-lipstick:before {
+  content: "\e975";
+}
+.jin-ifont-makeup:before {
+  content: "\e976";
+}
+.jin-ifont-male:before {
+  content: "\e977";
+}
+.jin-ifont-malefemale:before {
+  content: "\e978";
+}
+.jin-ifont-moneybag:before {
+  content: "\e979";
+}
+.jin-ifont-moneywallet:before {
+  content: "\e97a";
+}
+.jin-ifont-nikukyu:before {
+  content: "\e97b";
+}
+.jin-ifont-onpu:before {
+  content: "\e97c";
+}
+.jin-ifont-paint:before {
+  content: "\e97d";
+}
+.jin-ifont-petfood:before {
+  content: "\e97e";
+}
+.jin-ifont-plant:before {
+  content: "\e97f";
+}
+.jin-ifont-pocketwifi:before {
+  content: "\e980";
+}
+.jin-ifont-prbadge:before {
+  content: "\e981";
+}
+.jin-ifont-present:before {
+  content: "\e982";
+}
+.jin-ifont-qrpay:before {
+  content: "\e983";
+}
+.jin-ifont-rice:before {
+  content: "\e984";
+}
+.jin-ifont-rpoint:before {
+  content: "\e985";
+}
+.jin-ifont-rucksack:before {
+  content: "\e986";
+}
+.jin-ifont-saving:before {
+  content: "\e987";
+}
+.jin-ifont-scooter:before {
+  content: "\e988";
+}
+.jin-ifont-seedleaf:before {
+  content: "\e989";
+}
+.jin-ifont-shoes:before {
+  content: "\e98a";
+}
+.jin-ifont-simcard:before {
+  content: "\e98b";
+}
+.jin-ifont-skirt:before {
+  content: "\e98c";
+}
+.jin-ifont-smartphone:before {
+  content: "\e98d";
+}
+.jin-ifont-smartspeaker:before {
+  content: "\e98e";
+}
+.jin-ifont-smile:before {
+  content: "\e98f";
+}
+.jin-ifont-sun:before {
+  content: "\e990";
+}
+.jin-ifont-supplement:before {
+  content: "\e991";
+}
+.jin-ifont-supplement2:before {
+  content: "\e992";
+}
+.jin-ifont-tapioka:before {
+  content: "\e993";
+}
+.jin-ifont-telephone:before {
+  content: "\e994";
+}
+.jin-ifont-tops:before {
+  content: "\e995";
+}
+.jin-ifont-trade:before {
+  content: "\e996";
+}
+.jin-ifont-video:before {
+  content: "\e997";
+}
+.jin-ifont-weddingring:before {
+  content: "\e998";
+}
+.jin-ifont-weightscale:before {
+  content: "\e999";
+}
+.jin-ifont-wifi:before {
+  content: "\e99a";
+}
+.jin-ifont-wirelessearphone:before {
+  content: "\e99b";
+}
+.jin-ifont-answertxt:before {
+  content: "\e99c";
+}
+.jin-ifont-questiontxt:before {
+  content: "\e99d";
+}
+.jin-ifont-starcircle:before {
+  content: "\e99e";
+}
+.jin-ifont-fire:before {
+  content: "\e99f";
+}
+.jin-ifont-hamburger:before {
+  content: "\e9a0";
+}
+.jin-ifont-fish:before {
+  content: "\e9a1";
+}
+.jin-ifont-heartcircle:before {
+  content: "\e9a2";
+}
+.jin-ifont-hourglass:before {
+  content: "\e9a3";
+}
+.jin-ifont-rss:before {
+  content: "\e9a4";
+}
+.jin-ifont-leaf:before {
+  content: "\e9a5";
+}
+.jin-ifont-moon:before {
+  content: "\e9a6";
+}
+.jin-ifont-plug:before {
+  content: "\e9a7";
+}
+.jin-ifont-rocket:before {
+  content: "\e9a8";
+}
+.jin-ifont-sailing:before {
+  content: "\e9a9";
+}
+.jin-ifont-slash:before {
+  content: "\e9aa";
+}
+.jin-ifont-timer:before {
+  content: "\e9ac";
+}
+.jin-ifont-tv:before {
+  content: "\e9ad";
+}
+.jin-ifont-videocamera:before {
+  content: "\e9ae";
+}
+.jin-ifont-wine:before {
+  content: "\e9af";
+}
+.jin-ifont-anchor:before {
+  content: "\e9b0";
+}
+.jin-ifont-aqua:before {
+  content: "\e9b1";
+}
+.jin-ifont-backslash:before {
+  content: "\e9b2";
+}
+.jin-ifont-badge:before {
+  content: "\e9b4";
+}
+.jin-ifont-baseball:before {
+  content: "\e9b5";
+}
+.jin-ifont-basket:before {
+  content: "\e9b6";
+}
+.jin-ifont-basketball:before {
+  content: "\e9b7";
+}
+.jin-ifont-beachparasol:before {
+  content: "\e9b8";
+}
+.jin-ifont-businessman:before {
+  content: "\e9b9";
+}
+.jin-ifont-cameraretro:before {
+  content: "\e9ba";
+}
+.jin-ifont-carrot:before {
+  content: "\e9bb";
+}
+.jin-ifont-compass:before {
+  content: "\e9bc";
+}
+.jin-ifont-dollar:before {
+  content: "\e9bd";
+}
+.jin-ifont-academic:before {
+  content: "\e9be";
+}
+.jin-ifont-bell:before {
+  content: "\e9bf";
+}
+.jin-ifont-circle:before {
+  content: "\e9c0";
+}
+.jin-ifont-camp:before {
+  content: "\e9c1";
+}
+.jin-ifont-drier:before {
+  content: "\e9c2";
+}
+.jin-ifont-fingerbottom:before {
+  content: "\e9c3";
+}
+.jin-ifont-fingerright:before {
+  content: "\e9c4";
+}
+.jin-ifont-key:before {
+  content: "\e9c5";
+}
+.jin-ifont-number1square:before {
+  content: "\e9c6";
+}
+.jin-ifont-number2square:before {
+  content: "\e9c7";
+}
+.jin-ifont-number3square:before {
+  content: "\e9c8";
+}
+.jin-ifont-number4square:before {
+  content: "\e9c9";
+}
+.jin-ifont-number5square:before {
+  content: "\e9ca";
+}
+.jin-ifont-number6square:before {
+  content: "\e9cb";
+}
+.jin-ifont-number7square:before {
+  content: "\e9cc";
+}
+.jin-ifont-number8square:before {
+  content: "\e9cd";
+}
+.jin-ifont-number9square:before {
+  content: "\e9ce";
+}
+.jin-ifont-number10square:before {
+  content: "\e9cf";
+}
+.jin-ifont-number1circle:before {
+  content: "\e9d0";
+}
+.jin-ifont-number2circle:before {
+  content: "\e9d1";
+}
+.jin-ifont-number3circle:before {
+  content: "\e9d2";
+}
+.jin-ifont-number4circle:before {
+  content: "\e9d3";
+}
+.jin-ifont-number5circle:before {
+  content: "\e9d4";
+}
+.jin-ifont-number6circle:before {
+  content: "\e9d5";
+}
+.jin-ifont-number7circle:before {
+  content: "\e9d6";
+}
+.jin-ifont-number8circle:before {
+  content: "\e9d7";
+}
+.jin-ifont-number9circle:before {
+  content: "\e9d8";
+}
+.jin-ifont-number10circle:before {
+  content: "\e9d9";
+}
+.jin-ifont-answerbox:before {
+  content: "\e9da";
+}
+.jin-ifont-questionbox:before {
+  content: "\e9db";
+}
+.jin-ifont-wordpress:before {
+  content: "\e9dc";
+}
+.jin-ifont-pinterest:before {
+  content: "\e9dd";
+}
+.jin-ifont-amazon:before {
+  content: "\e9de";
+}
+.jin-ifont-human:before {
+  content: "\e9df";
+}

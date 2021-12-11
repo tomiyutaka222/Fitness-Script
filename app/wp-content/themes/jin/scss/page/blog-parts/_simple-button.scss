@@ -1,0 +1,198 @@
+/* CSS Document */
+@charset "utf-8";
+
+.color-button01,
+.color-button02,
+.color-button01-big,
+.color-button02-big{
+	margin-left: 5px;
+	margin-right: 5px;
+	letter-spacing: 0;
+	@include grid-media($mobile){
+		margin-bottom: 10px;
+	}
+	a{
+		color: #fff!important;
+	}
+}
+.color-button01-big,
+.color-button02-big{
+	margin-left:auto;
+	margin-right: auto;
+}
+
+
+.spfull{
+	@include grid-media($mobile){
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+.top-image-btn-color a,
+.color-button01 a,
+.color-button02 a{
+	@include trans01;
+	border-radius:6px;
+	text-align: center;
+	padding: 13px 80px;
+	padding-bottom: 12px;
+	display: inline-block;
+	text-decoration: none!important;
+	-webkit-transform:perspective(0);
+	transform:perspective(0);
+	font-size: 1.1rem;
+	opacity: 1!important;
+	@include grid-media($mobile){
+		padding: 12px 80px;
+		padding-bottom: 11px;
+		font-weight: 700;
+	}
+	@include grid-media($tablet){
+		font-weight: 400;
+	}
+}
+.spfull.color-button01 a,
+.spfull.color-button02 a{
+	@include grid-media($mobile){
+		width: 100%;
+	}
+}
+.color-button01-big a,
+.color-button02-big a{
+	@include trans01;
+	border-radius:4px;
+	text-align: center;
+	font-size: 1.2rem;
+	padding: 20px 30px;
+	max-width: 100%!important;
+	vertical-align: bottom;
+	display: block;
+	text-decoration: none!important;
+	-webkit-transform:perspective(0);
+	transform:perspective(0);
+	@include grid-media($mobile){
+		width: 100%!important;
+		font-weight: 700;
+	}
+	@include grid-media($tablet){
+		font-weight: 400;
+	}
+}
+
+
+.color-button01 img,
+.color-button02 img,
+.color-button01-big img,
+.color-button02-big img{
+	display: none;
+}
+
+.top-image-btn-color a:hover,
+.color-button01 a:hover,
+.color-button02 a:hover,
+.color-button01-big a:hover,
+.color-button02-big a:hover{
+	text-decoration: none!important;
+	opacity: 1;
+}
+
+.top-image-btn-color,
+.color-button01,
+.color-button02,
+.color-button01-big,
+.color-button02-big{
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+}
+.color-button01-big,
+.color-button02-big{
+	display: block;
+}
+.top-image-btn-color a,
+.color-button01 a,
+.color-button01-big a{
+	background-color: $link_color;
+	color: #fff!important;
+}
+.top-image-btn-color a{
+	@include grid-media($mobile){
+		font-weight: 700!important;
+	}
+	@include grid-media($tablet){
+		font-weight: 400!important;
+	}
+}
+.color-button02 a,
+.color-button02-big a{
+	background-color: #d9333f;
+	color: #fff!important;
+}
+.top-image-btn-color a:hover,
+.color-button01 a:hover,
+.color-button02 a:hover,
+.color-button01-big a:hover,
+.color-button02-big a:hover{
+	-webkit-transform: translateY(4px);
+	transform: translateY(4px);
+	-webkit-filter: brightness(0.9);
+     filter: brightness(0.9);
+}
+
+.top-image-btn-color:before,
+.color-button01:before,
+.color-button02:before,
+.color-button01-big:before,
+.color-button02-big:before{
+	position: absolute;
+	bottom: -4px;
+	z-index: -1;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 24px;
+	border-radius: 4px;
+	-webkit-filter: brightness(0.85);
+     filter: brightness(0.85);
+}
+.top-image-btn-color:before,
+.color-button01:before,
+.color-button02:before,{
+	border-radius: 6px;
+}
+.color-button01-big:before,
+.color-button02-big:before{
+	height: 100%;
+}
+.color-button01:before,
+.color-button01-big:before{
+	background-color: $link_color;
+}
+.color-button02:before,
+.color-button02-big:before{
+	background-color: #d9333f;
+}
+
+.twobutton{
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	.color-button01,
+	.color-button02{
+		@include grid-media($tablet){
+			margin-bottom: 10px;
+		}
+	}
+}
+
+
+//グーテンベルクで作成されたボタンのデフォルトセンター寄せ
+.gb-simple-button-center{
+	display: block;
+	text-align: center;
+}
+.gb-two-button-box{
+	display: flex;
+    justify-content: center;
+}

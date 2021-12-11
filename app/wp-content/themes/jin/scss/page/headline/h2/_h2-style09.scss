@@ -1,0 +1,27 @@
+/* CSS Document */
+@charset "utf-8";
+.h2-style09{
+	h2{
+		position: relative;
+		border-bottom: 3px double #ccc;
+		@include grid-media($mobile){
+			font-size: 1.45rem;
+			line-height: 1.8rem;
+			padding: 13px;
+			padding-left: 8px;
+			padding-bottom: 4px;
+			margin-top: 1.4rem;
+			margin-bottom: 1rem;
+			font-weight: 700;
+		}
+		@include grid-media($tablet){
+			font-size: 1.65rem;
+			line-height: 2rem;
+			padding: 15px;
+			padding-left: 8px;
+			padding-bottom: 6px;
+			margin-top: 2.6rem;
+			margin-bottom: 1.6rem;
+		}
+	}
+}

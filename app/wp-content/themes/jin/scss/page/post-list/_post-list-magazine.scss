@@ -1,0 +1,204 @@
+/* CSS Document */
+@charset "utf-8";
+
+.post-list-mag .post-list-inner-infeed,
+.post-list-mag-sp1col .post-list-inner-infeed{
+	overflow: hidden;
+	@include trans01;
+	@include grid-media($mobile){
+		@include paper-sp;
+		padding:0px;
+		margin-bottom: 0px;
+	}
+	@include grid-media($tablet){
+		@include paper;
+		padding:0px;
+		margin-bottom: 0px;
+	}
+}
+.post-list-mag .post-list-inner-infeed:hover,
+.post-list-mag-sp1col .post-list-inner-infeed:hover{
+	@include paper-hover;
+}
+.post-list-mag,
+.post-list-mag-sp1col,
+.post-list-mag3col,
+.post-list-mag3col-slide{
+	a.post-list-link{
+		position: relative;
+		padding: 0;
+		height: 100%;
+		@include trans01;
+	}
+	.post-list-link:hover{
+		@include paper-hover;
+	}
+}
+.post-list-mag,
+.post-list-mag3col,
+.post-list-mag-sp1col{
+	display: flex;
+	flex-wrap: wrap;
+	.post-list-item:nth-child(2n-1){
+		@include grid-media($mobile){
+			margin-right: 3%;
+		}
+	}
+	.post-list-item{
+		@include grid-media($mobile){
+			width: 48.4%;
+			margin-bottom: 15px;
+		}
+		@include grid-media($tablet){
+			width: 48.5%;
+			margin-bottom: 20px;
+		}
+		.post-list-inner{
+			display: block;
+			.post-list-thumb{
+				height: auto;
+				width: 100%;
+				img{
+					display: block;
+					width: 100%;
+					height: auto;
+					border-top-left-radius: 2px;
+					border-top-right-radius: 2px;
+				}
+			}
+			.post-list-meta{
+				width: 100%;
+				@include grid-media($mobile){
+					padding: 8px 11px;
+					padding-bottom: 20px;
+				}
+				@include grid-media($tablet){
+					padding: 10px 17px;
+					padding-bottom: 25px;
+				}
+				@include grid-media($pc_view){
+					padding: 15px 17px;
+					padding-bottom: 25px;
+				}
+				.post-list-title{
+					@include grid-media($mobile){
+						font-size:12px;
+						line-height: 1.1rem;
+						font-weight: 700;
+						letter-spacing: 1px;
+						margin-bottom: 10px;
+					}
+					@include grid-media($tablet){
+						font-size:14px;
+						line-height: 1.3rem;
+						font-weight: 500;
+						margin-bottom: 5px;
+					}
+					@include grid-media($pc_view){
+						font-size:18px;
+						line-height: 1.6rem;
+					}
+				}
+				.post-list-publisher,
+				.writer{
+					display: none;
+				}
+				.post-list-cat{
+					position: absolute;
+					color: #fff!important;
+					background-color: $base-color;
+					letter-spacing: 0;
+					border-radius: 20px;
+					@include grid-media($mobile){
+						top: 7px;
+						left: 7px;
+						padding: 2px 8px;
+						padding-bottom: 3px;
+						font-weight: 500;
+						text-align: left;
+						font-size: 0.5rem;
+					}
+					@include grid-media($tablet){
+						top: 11px;
+						left: 11px;
+						font-size: 0.55rem;
+						padding: 3px 10px;
+						margin-left: -1px;
+						font-weight: 400;
+						letter-spacing: 0;
+					}
+					@include grid-media($pc_view){
+						font-size: 0.65rem;
+						padding: 5px 12px;
+					}
+				}
+				.post-list-date{
+					position: absolute;
+					bottom: 0px;
+					left: 5%;
+					color: #888!important;
+					width: 90%;
+					text-align: right;
+					@include grid-media($mobile){
+						font-size: 0.65rem;
+						padding: 7px 0px;
+						letter-spacing: 1px!important;
+					}
+					@include grid-media($tablet){
+						font-size: 0.75rem;
+						font-weight: 400;
+						padding: 10px 0px;
+						letter-spacing: 1px;
+					}
+				}
+			}
+		}
+	}
+}
+.post-list-mag-sp1col{
+	.post-list-item:nth-child(2n-1){
+		@include grid-media($mobile){
+			margin-right: 0%;
+		}
+	}
+	.post-list-item{
+		@include grid-media($mobile){
+			width: 100%;
+		}
+		.post-list-inner{
+			.post-list-meta{
+				@include grid-media($mobile){
+					padding: 15px 15px;
+					padding-bottom: 20px;
+				}
+				.post-list-title{
+					@include grid-media($mobile){
+						font-size:17px;
+						line-height: 1.5rem;
+						font-weight: 700;
+						letter-spacing: 1px;
+						margin-bottom: 10px;
+					}
+				}
+				.post-list-cat{
+					@include grid-media($mobile){
+						top: 9px;
+						left: 9px;
+						padding: 2px 8px;
+						padding-bottom: 3px;
+						font-weight: 400;
+						text-align: left;
+						font-size: 0.75rem;
+					}
+				}
+				.post-list-date{
+					@include grid-media($mobile){
+						font-size: 0.75rem;
+						padding: 7px 0px;
+						letter-spacing: 1px!important;
+					}
+				}
+			}
+		}
+	}
+}
