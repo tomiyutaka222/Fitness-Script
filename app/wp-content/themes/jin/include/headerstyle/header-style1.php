@@ -19,13 +19,15 @@
 			<!-- 元にあったHeader要素の内容を削除 -->
 			<div class="site-info">
 				<div class="header-nav-content">
-					<a href="<?php echo esc_url(home_url('/')); ?>;">HOME</a>
+					<a href="<?php echo esc_url(home_url('/')); ?>">HOME</a>
 					<span> | </span>
 					<a href="">CONTACT</a>
 				</div>
 				<!-- TODO 画像の表示方法, カテゴリのの画像を取得してくる -->
 				<div class="header-image-content">
-					<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript" width="20%">
+					<a href="<?php echo esc_url(home_url('/')); ?>">
+						<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript" width="20%">
+					</a>
 				</div>
 				<div class="header-category-content">
 					<div class="category-content">
@@ -39,6 +41,13 @@
 						<a class="category-link" href="">
 							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
 							<br>
+							<strong>NUTRION</strong>
+							<br>
+							<span>栄養</span>
+						</a>
+						<a class="category-link" href="">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<br>
 							<strong>MEAL</strong>
 							<br>
 							<span>食事</span>
@@ -46,16 +55,9 @@
 						<a class="category-link" href="">
 							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
 							<br>
-							<strong>NUTRION</strong>
-							<br>
-							<span>天然</span>
-						</a>
-						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
-							<br>
 							<strong>EXERCISE</strong>
 							<br>
-							<span>健康</span>
+							<span>運動</span>
 						</a>
 					</div>
 				</div>
