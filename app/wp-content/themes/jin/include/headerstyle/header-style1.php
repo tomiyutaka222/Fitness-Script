@@ -23,16 +23,40 @@
 					<span> | </span>
 					<a href="">CONTACT</a>
 				</div>
-				<!-- TODO 画像の表示方法, カテゴリの画像を取得してくる -->
+				<!-- TODO 画像の表示方法, カテゴリのの画像を取得してくる -->
 				<div class="header-image-content">
-					<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript">
+					<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript" width="30%">
 				</div>
 				<div class="header-category-content">
 					<div class="category-content">
-						<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="100px">
-						<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="100px">
-						<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="100px">
-						<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="100px">
+						<a class="category-link" href="">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<br>
+							<strong>HEALTH</strong>
+							<br>
+							<span>健康</span>
+						</a>
+						<a class="category-link" href="">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<br>
+							<strong>MEAL</strong>
+							<br>
+							<span>食事</span>
+						</a>
+						<a class="category-link" href="">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<br>
+							<strong>NUTRION</strong>
+							<br>
+							<span>天然</span>
+						</a>
+						<a class="category-link" href="">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<br>
+							<strong>EXERCISE</strong>
+							<br>
+							<span>健康</span>
+						</a>
 					</div>
 				</div>
 				<div class="header-sub-content">
