@@ -101,6 +101,8 @@
 
 </head>
 
+<!-- TODO classの動的生成部分などを使わないのであればHTML化 -->
+
 <body <?php body_class(); ?> id="<?php echo is_font_style(); ?>">
 	<div id="wrapper">
 
@@ -154,7 +156,7 @@
 
 		<div id="scroll-content" class="<?php is_animation_style(); ?>">
 
-			<!--ヘッダー-->
+			<!--ヘッダー TODO この部分のロジックを削除し、HTMLで記述-->
 
 			<?php if (is_header_design() == 'header_style1') : ?>
 				<?php get_template_part('include/headerstyle/header-style1'); ?>
