@@ -25,7 +25,7 @@
 				</div>
 				<!-- TODO 画像の表示方法, カテゴリのの画像を取得してくる -->
 				<div class="header-image-content">
-					<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript" width="30%">
+					<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript" width="20%">
 				</div>
 				<div class="header-category-content">
 					<div class="category-content">
