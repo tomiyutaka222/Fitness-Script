@@ -10339,22 +10339,35 @@ a.post-list-link {
   .post-list-mag .post-list-item,
   .post-list-mag3col .post-list-item,
   .post-list-mag-sp1col .post-list-item {
-    width: 100%;
+    width: 30%;
     margin-bottom: 20px;
   }
 }
 
-.post-list-mag3col .post-list-item .post-list-inner,
+/* yabuta customize start */
+.post-list-mag
+  .post-list-item
+  .post-list-inner
+  .post-list-mag3col
+  .post-list-item
+  .post-list-inner,
 .post-list-mag-sp1col .post-list-item .post-list-inner {
   display: block;
 }
 
-.post-list-mag .post-list-item .post-list-inner {
+/* .post-list-mag .post-list-item .post-list-inner {
   display: flex;
 }
 .post-list-mag .post-list-item .post-list-inner img {
   width: 120%;
+} */
+.top-category-name {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #bebebe;
 }
+/* yabuta customize end */
 
 .post-list-mag .post-list-item .post-list-inner .post-list-thumb,
 .post-list-mag3col .post-list-item .post-list-inner .post-list-thumb,
@@ -10597,7 +10610,6 @@ a.post-list-link {
   .post-list-inner
   .post-list-meta
   .post-list-date {
-  position: absolute;
   bottom: 0px;
   left: 5%;
   color: #888 !important;
@@ -10911,7 +10923,6 @@ a.post-list-link {
   .post-list-inner
   .post-list-meta
   .post-list-date {
-  position: absolute;
   bottom: 3px;
   right: 12px;
   color: #aaa;
