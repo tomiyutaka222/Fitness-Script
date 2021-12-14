@@ -249,7 +249,7 @@ footer {
 
 @media (min-width: 1200px) {
   #contents {
-    width: 1200px;
+    width: 80%;
   }
 }
 
@@ -283,7 +283,7 @@ footer {
 
 @media (min-width: 768px) {
   #main-contents {
-    width: calc(66.66667% - 16.66667px);
+    width: calc(80.66667% - 16.66667px);
     float: left;
     margin-left: 10px;
   }
@@ -291,7 +291,7 @@ footer {
 
 @media (min-width: 1024px) {
   #main-contents {
-    width: calc(67.5% - 50.25px);
+    width: calc(90.5% - 50.25px);
     float: left;
     margin-left: 30px;
     margin-bottom: 0;
@@ -10366,6 +10366,25 @@ a.post-list-link {
   text-align: center;
   font-size: 14px;
   color: #bebebe;
+}
+
+.category-article .category-article-area .category-name {
+  margin: 50px 0 50px 0;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 8px;
+  display: block;
+  text-align: center;
+  color: #888164;
+}
+
+.category-article .category-article-area .category-article-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-list-inner {
+  margin: 0 20px 0 20px;
 }
 /* yabuta customize end */
 
