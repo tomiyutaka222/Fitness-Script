@@ -62,6 +62,8 @@
 				</div>
 			<?php endif; ?>
 
+			<?php get_template_part('include/liststyle/post-list'); ?>
+
 			<?php if (is_post_list_style() == "magazinestyle") : ?>
 				<?php get_template_part('include/liststyle/post-list-mag'); ?>
 			<?php elseif (is_post_list_style() == "magazinestyle-sp1col") : ?>

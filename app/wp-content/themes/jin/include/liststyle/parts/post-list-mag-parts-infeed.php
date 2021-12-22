@@ -18,13 +18,11 @@
 				'category_name' => 'health' // 表示したいカテゴリーのスラッグを指定
 			);
 
-			// 
+			// カテゴリーの投稿を3件取得
 			$posts = get_posts($arg);
 
-			?>
-			<?php foreach ($posts as $post) :
-				setup_postdata($post); ?>
-				<?php
+			foreach ($posts as $post) :
+				setup_postdata($post);
 				// カテゴリー情報を取得
 				$category = get_the_category();
 				if (isset($category[0])) {
@@ -35,7 +33,7 @@
 				} else {
 					$cat_name = "";
 				}
-				?>
+			?>
 
 				<?php if (!is_mobile() && isset($infeed_ad_pc[$infeed_ad_num]) && $infeed_ad_pc[$infeed_ad_num] == $infeed_ad_count) : ?>
 
@@ -131,14 +129,13 @@
 									<?php endif; ?>
 								<?php endif; ?>
 							</div>
-							<div class="">
-								<?php if (mb_strlen($post->post_content, 'UTF-8') > 55) {
-									$content = mb_substr($post->post_content, 0, 55, 'UTF-8');
+							<div class="item-over-view">
+								<?php if (mb_strlen($post->post_content, 'UTF-8') > 100) {
+									$content = mb_substr($post->post_content, 0, 100, 'UTF-8');
 									echo $content . '……';
-								} else {
-									echo $post->post_content;
 								} ?>
 							</div>
+							<span class="item-more">more ➤</span>
 						</div>
 					</a>
 				</article>
@@ -168,13 +165,11 @@
 				'category_name' => 'nutrion' // 表示したいカテゴリーのスラッグを指定
 			);
 
-			// 
+			// カテゴリーの投稿を3件取得
 			$posts = get_posts($arg);
 
-			?>
-			<?php foreach ($posts as $post) :
-				setup_postdata($post); ?>
-				<?php
+			foreach ($posts as $post) :
+				setup_postdata($post);
 				// カテゴリー情報を取得
 				$category = get_the_category();
 				if (isset($category[0])) {
@@ -185,7 +180,7 @@
 				} else {
 					$cat_name = "";
 				}
-				?>
+			?>
 
 				<?php if (!is_mobile() && isset($infeed_ad_pc[$infeed_ad_num]) && $infeed_ad_pc[$infeed_ad_num] == $infeed_ad_count) : ?>
 
@@ -281,14 +276,13 @@
 									<?php endif; ?>
 								<?php endif; ?>
 							</div>
-							<div class="">
-								<?php if (mb_strlen($post->post_content, 'UTF-8') > 55) {
-									$content = mb_substr($post->post_content, 0, 55, 'UTF-8');
+							<div class="item-over-view">
+								<?php if (mb_strlen($post->post_content, 'UTF-8') > 100) {
+									$content = mb_substr($post->post_content, 0, 100, 'UTF-8');
 									echo $content . '……';
-								} else {
-									echo $post->post_content;
 								} ?>
 							</div>
+							<span class="item-more">more ➤</span>
 						</div>
 					</a>
 				</article>
@@ -315,16 +309,14 @@
 				'posts_per_page' => 3, // 表示する件数
 				'orderby' => 'date', // 日付でソート
 				'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
-				'category_name' => 'meal' // 表示したいカテゴリーのスラッグを指定
+				'category_name' => 'meal', // 表示したいカテゴリーのスラッグを指定
 			);
 
-			// 
+			// カテゴリーの投稿を3件取得
 			$posts = get_posts($arg);
 
-			?>
-			<?php foreach ($posts as $post) :
-				setup_postdata($post); ?>
-				<?php
+			foreach ($posts as $post) :
+				setup_postdata($post);
 				// カテゴリー情報を取得
 				$category = get_the_category();
 				if (isset($category[0])) {
@@ -335,7 +327,7 @@
 				} else {
 					$cat_name = "";
 				}
-				?>
+			?>
 
 				<?php if (!is_mobile() && isset($infeed_ad_pc[$infeed_ad_num]) && $infeed_ad_pc[$infeed_ad_num] == $infeed_ad_count) : ?>
 
@@ -431,14 +423,13 @@
 									<?php endif; ?>
 								<?php endif; ?>
 							</div>
-							<div class="">
-								<?php if (mb_strlen($post->post_content, 'UTF-8') > 55) {
-									$content = mb_substr($post->post_content, 0, 55, 'UTF-8');
+							<div class="item-over-view">
+								<?php if (mb_strlen($post->post_content, 'UTF-8') > 100) {
+									$content = mb_substr($post->post_content, 0, 100, 'UTF-8');
 									echo $content . '……';
-								} else {
-									echo $post->post_content;
 								} ?>
 							</div>
+							<span class="item-more">more ➤</span>
 						</div>
 					</a>
 				</article>
@@ -468,13 +459,11 @@
 				'category_name' => 'exercise' // 表示したいカテゴリーのスラッグを指定
 			);
 
-			// 
+			// カテゴリーの投稿を3件取得
 			$posts = get_posts($arg);
 
-			?>
-			<?php foreach ($posts as $post) :
-				setup_postdata($post); ?>
-				<?php
+			foreach ($posts as $post) :
+				setup_postdata($post);
 				// カテゴリー情報を取得
 				$category = get_the_category();
 				if (isset($category[0])) {
@@ -485,7 +474,7 @@
 				} else {
 					$cat_name = "";
 				}
-				?>
+			?>
 
 				<?php if (!is_mobile() && isset($infeed_ad_pc[$infeed_ad_num]) && $infeed_ad_pc[$infeed_ad_num] == $infeed_ad_count) : ?>
 
@@ -581,14 +570,13 @@
 									<?php endif; ?>
 								<?php endif; ?>
 							</div>
-							<div class="">
-								<?php if (mb_strlen($post->post_content, 'UTF-8') > 55) {
-									$content = mb_substr($post->post_content, 0, 55, 'UTF-8');
+							<div class="item-over-view">
+								<?php if (mb_strlen($post->post_content, 'UTF-8') > 100) {
+									$content = mb_substr($post->post_content, 0, 100, 'UTF-8');
 									echo $content . '……';
-								} else {
-									echo $post->post_content;
 								} ?>
 							</div>
+							<span class="item-more">more ➤</span>
 						</div>
 					</a>
 				</article>

@@ -32,28 +32,28 @@
 				<div class="header-category-content">
 					<div class="category-content">
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>HEALTH</strong>
 							<br>
 							<span>健康</span>
 						</a>
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>NUTRION</strong>
 							<br>
 							<span>栄養</span>
 						</a>
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>MEAL</strong>
 							<br>
 							<span>食事</span>
 						</a>
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="70px">
+							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>EXERCISE</strong>
 							<br>
