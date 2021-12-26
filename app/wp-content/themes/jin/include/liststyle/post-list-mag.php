@@ -7,6 +7,7 @@
 			$ad_infeed_sp_num = get_option('ad_infeed_sp_num');
 			?>
 			<?php get_template_part('include/liststyle/parts/post-list-pickup-parts'); ?>
+			<?php get_template_part('searchform'); ?>
 			<?php if (isset($ad_infeed_pc_num) || isset($ad_infeed_sp_num)) : ?>
 				<?php get_template_part('include/liststyle/parts/post-list-mag-parts-infeed'); ?>
 			<?php else : ?>

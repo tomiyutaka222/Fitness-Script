@@ -1,6 +1,6 @@
 <div class="category-article">
 	<div class="category-article-area">
-		<span class="category-name">- HEALTH -</span>
+		<span class="contents-title">- HEALTH -</span>
 		<div class="category-article-items">
 			<?php
 			$ad_infeed_pc_num = get_option('ad_infeed_pc_num');
@@ -69,7 +69,7 @@
 						<div class="post-list-inner">
 							<div class="post-list-meta vcard">
 								<?php if (!$cat_name == "") : ?>
-									<span class="top-category-name" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
+									<span class="top-contents-title" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
 								<?php endif; ?>
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
@@ -150,7 +150,7 @@
 		</a>
 	</div>
 	<div class="category-article-area">
-		<span class="category-name">- NUTRION -</span>
+		<span class="contents-title">- NUTRION -</span>
 		<div class="category-article-items">
 			<?php
 			$ad_infeed_pc_num = get_option('ad_infeed_pc_num');
@@ -219,7 +219,7 @@
 						<div class="post-list-inner">
 							<div class="post-list-meta vcard">
 								<?php if (!$cat_name == "") : ?>
-									<span class="top-category-name" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
+									<span class="top-contents-title" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
 								<?php endif; ?>
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
@@ -300,7 +300,7 @@
 		</a>
 	</div>
 	<div class="category-article-area">
-		<span class="category-name">- MEAL -</span>
+		<span class="contents-title">- MEAL -</span>
 		<div class="category-article-items">
 			<?php
 			$ad_infeed_pc_num = get_option('ad_infeed_pc_num');
@@ -369,7 +369,7 @@
 						<div class="post-list-inner">
 							<div class="post-list-meta vcard">
 								<?php if (!$cat_name == "") : ?>
-									<span class="top-category-name" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
+									<span class="top-contents-title" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
 								<?php endif; ?>
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
@@ -450,7 +450,7 @@
 		</a>
 	</div>
 	<div class="category-article-area">
-		<span class="category-name">- EXERCISE -</span>
+		<span class="contents-title">- EXERCISE -</span>
 		<div class="category-article-items">
 			<?php
 			$ad_infeed_pc_num = get_option('ad_infeed_pc_num');
@@ -519,7 +519,7 @@
 						<div class="post-list-inner">
 							<div class="post-list-meta vcard">
 								<?php if (!$cat_name == "") : ?>
-									<span class="top-category-name" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
+									<span class="top-contents-title" itemprop="keywords"><?php echo "-" . $cat_name . "-" ?></span>
 								<?php endif; ?>
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>

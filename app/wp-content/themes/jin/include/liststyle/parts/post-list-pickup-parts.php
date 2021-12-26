@@ -1,5 +1,5 @@
 <div class="category-article">
-    <span class="pickup-title">- PICK UP -</span>
+    <span class="contents-title">- PICK UP -</span>
 
     <?php
     $ad_infeed_pc_num = get_option('ad_infeed_pc_num');

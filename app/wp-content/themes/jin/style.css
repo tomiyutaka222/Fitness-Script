@@ -10367,15 +10367,9 @@ a.post-list-link {
   display: block;
 }
 
-/* .post-list-mag .post-list-item .post-list-inner {
-  display: flex;
-}
-.post-list-mag .post-list-item .post-list-inner img {
-  width: 120%;
-} */
-
-.pickup-title {
-  margin: 50px 0 50px 0;
+/* トップページの共通部分のCSS */
+.contents-title {
+  margin: 50px 0 80px 0;
   font-size: 24px;
   font-weight: 100;
   letter-spacing: 8px;
@@ -10383,20 +10377,12 @@ a.post-list-link {
   text-align: center;
 }
 
+/* トップページの各カテゴリ投稿表示部分のCSS */
 .top-category-name {
   display: block;
   text-align: center;
   font-size: 14px;
   color: #bebebe;
-}
-
-.category-article .category-article-area .category-name {
-  margin: 50px 0 50px 0;
-  font-size: 24px;
-  font-weight: 100;
-  letter-spacing: 8px;
-  display: block;
-  text-align: center;
 }
 
 .item-over-view {
@@ -10449,6 +10435,44 @@ a.post-list-link {
 }
 .item-over-view {
   margin: 20px 20px 10px 20px;
+}
+
+/* 検索フォーム周辺部分のCSS */
+.search-contents {
+  margin: 20px 0 150px 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+#searchform {
+  border: none;
+  margin-bottom: 80px;
+}
+
+.search-text {
+  background-color: #fff;
+  width: 500px;
+  height: 50px;
+  outline: none;
+}
+#searchsubmit {
+  background-color: #c6bea4;
+  color: #fff;
+  margin: -10px 0 0 -7px;
+  width: 50px;
+  height: 50px;
+  outline: none;
+}
+.tag-contents {
+}
+.tag-search-button {
+  background-color: #000;
+  border-radius: 30px;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 10px 0 10px;
 }
 
 /* yabuta customize end */
