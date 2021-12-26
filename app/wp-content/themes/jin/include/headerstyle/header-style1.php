@@ -26,34 +26,34 @@
 				<!-- TODO 画像の表示方法, カテゴリのの画像を取得してくる -->
 				<div class="header-image-content">
 					<a href="<?php echo esc_url(home_url('/')); ?>">
-						<img src="wp-content/themes/jin/img/header-min.png" alt="FitnessScript" width="20%">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/header-min.png" alt="FitnessScript" width="20%">
 					</a>
 				</div>
 				<div class="header-category-content">
 					<div class="category-content">
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>HEALTH</strong>
 							<br>
 							<span>健康</span>
 						</a>
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>NUTRION</strong>
 							<br>
 							<span>栄養</span>
 						</a>
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>MEAL</strong>
 							<br>
 							<span>食事</span>
 						</a>
 						<a class="category-link" href="">
-							<img src="wp-content/themes/jin/img/favicon.png" alt="画像が表示できません" width="50px">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>EXERCISE</strong>
 							<br>

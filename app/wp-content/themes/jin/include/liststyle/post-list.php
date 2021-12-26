@@ -1,3 +1,17 @@
+<?php
+$arg = array(
+	'posts_per_page' => 2, // 表示する件数
+	'orderby' => 'date', // 日付でソート
+	'order' => 'DESC', // DESCで最新から表示、ASCで最古から表示
+	'meta_key'    => "recommend_posts",
+	'meta_value'  => "おすすめ記事にする"
+);
+
+
+// カテゴリーの投稿を3件取得
+$posts = get_posts($arg);
+?>
+
 <?php if (!get_theme_mod('toppost_list_cat')) : ?>
 	<div class="toppost-list-box-simple">
 		<div class="post-list <?php echo is_post_list_style() ?>">
@@ -7,9 +21,8 @@
 			$ad_infeed_sp_num = get_option('ad_infeed_sp_num');
 			?>
 			<?php if (isset($ad_infeed_pc_num) || isset($ad_infeed_sp_num)) : ?>
-				<?php get_template_part('include/liststyle/parts/post-list-parts-infeed'); ?>
+				<?php get_template_part('include/liststyle/parts/post-list-pickup-parts'); ?>
 			<?php else : ?>
-
 				<?php while (have_posts()) : the_post(); ?>
 					<?php get_template_part('include/liststyle/parts/post-list-parts'); ?>
 				<?php endwhile; ?>

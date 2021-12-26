@@ -1359,7 +1359,7 @@ footer {
 #header .header-category-content {
   width: 100%;
   border-bottom: #b9b9b9 solid 1px;
-  padding: 15px 0 50px 0;
+  padding: 30px 0 50px 0;
   color: #747474;
 }
 #header .header-category-content .category-link {
@@ -1368,17 +1368,20 @@ footer {
 }
 #header .header-category-content .category-link span {
   color: #bebebe;
+  letter-spacing: 8px;
+  font-size: 14px;
 }
 #header .header-category-content .category-link strong {
-  letter-spacing: 5px;
-  font-weight: 500;
+  letter-spacing: 4px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
 }
 #header .header-category-content .category-content {
   width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  color: #747474;
 }
 /* yabuta customize end */
 
@@ -10345,6 +10348,7 @@ a.post-list-link {
 }
 
 /* yabuta customize start */
+/* トップページのカテゴリ毎の記事表示部分のCSS */
 .post-list-mag
   .post-list-item
   .post-list-inner
@@ -10361,6 +10365,16 @@ a.post-list-link {
 .post-list-mag .post-list-item .post-list-inner img {
   width: 120%;
 } */
+
+.pickup-title {
+  margin: 50px 0 50px 0;
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 8px;
+  display: block;
+  text-align: center;
+}
+
 .top-category-name {
   display: block;
   text-align: center;
@@ -10395,6 +10409,29 @@ a.post-list-link {
   letter-spacing: 4px;
   text-align: right;
 }
+
+/* トップページのおすすめ記事表示部分のCSS */
+.post-list-inner-pickup {
+  display: flex;
+  padding: 15px 15px 15px 15px;
+}
+.post-list-title-pickup {
+  font-size: 24px;
+  font-weight: 300;
+}
+.post-list-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.post-list-pickup-title {
+  border-bottom: #000 solid 1px;
+  margin: 10px 20px 10px 20px;
+}
+.item-over-view {
+  margin: 20px 20px 10px 20px;
+}
+
 /* yabuta customize end */
 
 .post-list-mag .post-list-item .post-list-inner .post-list-thumb,

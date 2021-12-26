@@ -13,7 +13,7 @@
 					</div>
 				<?php endif; ?>
 
-				<?php get_template_part('include/liststyle/post-list-mag'); ?>
+
 
 				<?php if (wp_isset_widets('home-bottom-widget', true)) : ?>
 					<div id="home-bottom-widget">
@@ -61,8 +61,6 @@
 					<?php dynamic_sidebar('home-top-widget'); ?>
 				</div>
 			<?php endif; ?>
-
-			<?php get_template_part('include/liststyle/post-list'); ?>
 
 			<?php if (is_post_list_style() == "magazinestyle") : ?>
 				<?php get_template_part('include/liststyle/post-list-mag'); ?>
