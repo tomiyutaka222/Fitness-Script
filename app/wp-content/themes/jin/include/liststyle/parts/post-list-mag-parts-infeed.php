@@ -145,6 +145,9 @@
 			wp_reset_postdata();
 			?>
 		</div>
+		<a class="category-more-link" href="">
+			<span class="category-more-button">more | このカテゴリをもっと見る</span>
+		</a>
 	</div>
 	<div class="category-article-area">
 		<span class="category-name">- NUTRION -</span>
@@ -292,6 +295,9 @@
 			wp_reset_postdata();
 			?>
 		</div>
+		<a class="category-more-link" href="">
+			<span class="category-more-button">more | このカテゴリをもっと見る</span>
+		</a>
 	</div>
 	<div class="category-article-area">
 		<span class="category-name">- MEAL -</span>
@@ -439,6 +445,9 @@
 			wp_reset_postdata();
 			?>
 		</div>
+		<a class="category-more-link" href="">
+			<span class="category-more-button">more | このカテゴリをもっと見る</span>
+		</a>
 	</div>
 	<div class="category-article-area">
 		<span class="category-name">- EXERCISE -</span>
@@ -586,5 +595,8 @@
 			wp_reset_postdata();
 			?>
 		</div>
+		<a class="category-more-link" href="">
+			<span class="category-more-button">more | このカテゴリをもっと見る</span>
+		</a>
 	</div>
 </div>

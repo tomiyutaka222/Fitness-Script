@@ -1383,6 +1383,14 @@ footer {
   display: flex;
   justify-content: space-between;
 }
+#header .header-nav-content {
+  padding: 20px 0 10px 30px;
+  font-size: 18px;
+  color: #000;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
 /* yabuta customize end */
 
 @media (max-width: 767px) {
@@ -10408,6 +10416,17 @@ a.post-list-link {
   display: block;
   letter-spacing: 4px;
   text-align: right;
+}
+.category-more-link {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 120px 0;
+}
+.category-more-button {
+  display: inline;
+  border: #000 solid 2px;
+  padding: 15px 80px 15px 20px;
+  color: #000;
 }
 
 /* トップページのおすすめ記事表示部分のCSS */
