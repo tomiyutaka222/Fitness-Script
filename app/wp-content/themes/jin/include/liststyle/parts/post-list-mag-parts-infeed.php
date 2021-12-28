@@ -145,7 +145,7 @@
 			wp_reset_postdata();
 			?>
 		</div>
-		<a class="category-more-link" href="">
+		<a class="category-more-link" href="<?php $blog_home = get_home_url(); ?>/health/">
 			<span class="category-more-button">more | このカテゴリをもっと見る</span>
 		</a>
 	</div>
@@ -295,7 +295,7 @@
 			wp_reset_postdata();
 			?>
 		</div>
-		<a class="category-more-link" href="">
+		<a class="category-more-link" href="<?php $blog_home = get_home_url(); ?>/nutrion/">
 			<span class="category-more-button">more | このカテゴリをもっと見る</span>
 		</a>
 	</div>
@@ -445,7 +445,7 @@
 			wp_reset_postdata();
 			?>
 		</div>
-		<a class="category-more-link" href="">
+		<a class="category-more-link" href="<?php $blog_home = get_home_url(); ?>/meal/">
 			<span class="category-more-button">more | このカテゴリをもっと見る</span>
 		</a>
 	</div>
@@ -595,7 +595,7 @@
 			wp_reset_postdata();
 			?>
 		</div>
-		<a class="category-more-link" href="">
+		<a class="category-more-link" href="<?php $blog_home = get_home_url(); ?>/exercise/">
 			<span class="category-more-button">more | このカテゴリをもっと見る</span>
 		</a>
 	</div>

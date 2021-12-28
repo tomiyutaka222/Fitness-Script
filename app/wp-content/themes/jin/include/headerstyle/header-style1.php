@@ -31,28 +31,28 @@
 				</div>
 				<div class="header-category-content">
 					<div class="category-content">
-						<a class="category-link" href="">
+						<a class="category-link" href="<?php $blog_home = get_home_url(); ?>/health/">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>HEALTH</strong>
 							<br>
 							<span>健康</span>
 						</a>
-						<a class="category-link" href="">
+						<a class="category-link" href="<?php $blog_home = get_home_url(); ?>/nutrion/">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>NUTRION</strong>
 							<br>
 							<span>栄養</span>
 						</a>
-						<a class="category-link" href="">
+						<a class="category-link" href="<?php $blog_home = get_home_url(); ?>/meal/">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>MEAL</strong>
 							<br>
 							<span>食事</span>
 						</a>
-						<a class="category-link" href="">
+						<a class="category-link" href="<?php $blog_home = get_home_url(); ?>/exercise/">
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.png" alt="画像が表示できません" width="50px">
 							<br>
 							<strong>EXERCISE</strong>
