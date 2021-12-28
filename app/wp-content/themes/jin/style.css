@@ -267,7 +267,6 @@ footer {
   #main-contents-one {
     width: calc(100% - 60px);
     float: left;
-    margin-left: 30px;
   }
 }
 
@@ -275,7 +274,6 @@ footer {
   #main-contents {
     width: calc(100% - 30px);
     float: left;
-    margin-left: 15px;
     margin-bottom: 15px;
     margin-top: 10px;
   }
@@ -283,17 +281,15 @@ footer {
 
 @media (min-width: 768px) {
   #main-contents {
-    width: calc(80.66667% - 16.66667px);
+    width: 100%;
     float: left;
-    margin-left: 10px;
   }
 }
 
 @media (min-width: 1024px) {
   #main-contents {
-    width: calc(90.5% - 50.25px);
+    width: 100%;
     float: left;
-    margin-left: 30px;
     margin-bottom: 0;
   }
 }
@@ -1343,6 +1339,9 @@ footer {
 }
 
 /* yabuta customize start */
+#category-contents {
+  background-color: #fff;
+}
 #header .header-nav-content {
   width: 100%;
   padding-bottom: 15px;
