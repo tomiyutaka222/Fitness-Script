@@ -74,9 +74,6 @@
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
 
-								<?php if (is_date_style() != 'none') : ?>
-									<span class="post-list-date date updated ef" itemprop="datePublished dateModified" datetime="<?php the_time('Y-m-d'); ?>" content="<?php the_time('Y-m-d'); ?>"><?php the_time(get_option('date_format')); ?></span>
-								<?php endif; ?>
 
 								<span class="writer fn" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><?php the_author(); ?></span></span>
 
@@ -224,9 +221,6 @@
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
 
-								<?php if (is_date_style() != 'none') : ?>
-									<span class="post-list-date date updated ef" itemprop="datePublished dateModified" datetime="<?php the_time('Y-m-d'); ?>" content="<?php the_time('Y-m-d'); ?>"><?php the_time(get_option('date_format')); ?></span>
-								<?php endif; ?>
 
 								<span class="writer fn" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><?php the_author(); ?></span></span>
 
@@ -374,9 +368,6 @@
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
 
-								<?php if (is_date_style() != 'none') : ?>
-									<span class="post-list-date date updated ef" itemprop="datePublished dateModified" datetime="<?php the_time('Y-m-d'); ?>" content="<?php the_time('Y-m-d'); ?>"><?php the_time(get_option('date_format')); ?></span>
-								<?php endif; ?>
 
 								<span class="writer fn" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><?php the_author(); ?></span></span>
 
@@ -524,9 +515,6 @@
 
 								<h2 class="post-list-title entry-title" itemprop="headline"><?php echo $post->post_title; ?></h2>
 
-								<?php if (is_date_style() != 'none') : ?>
-									<span class="post-list-date date updated ef" itemprop="datePublished dateModified" datetime="<?php the_time('Y-m-d'); ?>" content="<?php the_time('Y-m-d'); ?>"><?php the_time(get_option('date_format')); ?></span>
-								<?php endif; ?>
 
 								<span class="writer fn" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name"><?php the_author(); ?></span></span>
 
